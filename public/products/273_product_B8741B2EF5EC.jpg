@@ -1,0 +1,1396 @@
+﻿<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tirupatisales | Home</title>
+		<meta name="description" content="Tirupatisales | Home">
+		<meta name="keywords" content="Tirupatisales | Home">
+		<meta name="author" content="Infinizo Studios | Valsad, Gujarat, India - 396001"> 
+		<link href="https://www.tirupatisales.com/site/plugins/OwlCarousel/css/owl.carousel.min.css" rel="stylesheet" />
+		<link href="https://www.tirupatisales.com/site/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+		<link href="https://www.tirupatisales.com/site/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+		<link href="https://www.tirupatisales.com/site/css/app9.css" rel="stylesheet">
+		<link href="https://www.tirupatisales.com/site/css/icons.css" rel="stylesheet">
+		<link href="https://www.tirupatisales.com/site/css/mediaqueries3.css" rel="stylesheet">
+		<link href="https://www.tirupatisales.com/site/css/lightbox.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" >
+		<script src="https://www.tirupatisales.com/site/js/bootstrap.bundle.min.js"></script>
+		<script src="https://www.tirupatisales.com/site/js/jquery.min.js"></script>
+		<link rel="icon" type="image/png" href="https://www.tirupatisales.com/site/images/favicon.png">
+	</head>
+
+<body>
+	<!--wrapper-->
+	<div class="wrapper" style="overflow: hidden;">
+		<!--start top header wrapper-->
+		<div class="header-wrapper" >
+		
+			<div class="header-content">
+				<div class="container">
+
+				<div class="marquee">
+					<p>Welcome to Tirupati Sales Corporation Since 1993!!!! India’s Biggest & Trusted Distributor & Servicing Company with annual turnover 5000 million & 150+ manpower</p>
+				</div>
+
+					<div class="row d-flex align-items-center gx-4 justify-content-between" >
+						<div class="col-xl-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="d-flex align-items-center gap-3">
+								<div class="mobile-toggle-menu d-inline d-xl-none" data-bs-toggle="offcanvas"
+									data-bs-target="#offcanvasNavbar">
+									<i class="bx bx-menu"></i>
+								</div>
+								<div class="logo">
+									<a href="https://www.tirupatisales.com/">
+										<img src="https://www.tirupatisales.com/site/images/Tirupati-Sales-Logo.webp" class="logo-icon" alt="Tirupati Sales" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-4 col-sm-12 col-xs-12">
+							<div style="display: flex;align-items: center;position: relative;">
+								<input id="txtSearch" type="text" data-bs-toggle="dropdown" class="form-control  border-dark border border-1 dropdown-toggle dropdown-toggle-nocaret" placeholder="Search for Products" style="font-size: 12px;border-radius: 16px;height: 36px;font-weight: 600;">
+								<button onclick="btnSearch_Click()" class="btn-search"  type="button"><i style="margin: 0;font-size: 16px;font-weight: 600;" class="bx bx-search-alt-2"></i></button>
+
+								<ul class="dropdown-menu" style="width:100%;margin-top:8px;max-height: 250px;overflow-y: auto;" id="divSearch_Product">
+									
+								</ul>
+
+							</div>
+						</div>
+					
+					</div>
+					<!--end row-->
+				</div>
+			</div>
+			<div class="primary-menu">
+				<nav class="navbar navbar-expand-xl w-100 navbar-dark container mb-0 p-0">
+					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+					  <div class="offcanvas-header">
+						<div class="offcanvas-logo"><a href="https://www.tirupatisales.com/"><img src="https://www.tirupatisales.com/site/images/Tirupati-Sale.png" width="140" alt="Tirupati Sales"></a></div>
+						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					  </div>
+					  <div class="offcanvas-body primary-menu">
+						<ul class="navbar-nav justify-content-start flex-grow-1 gap-1">
+						  <li class="nav-item">
+							<a class="nav-link active" href="https://www.tirupatisales.com/">Home</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/about">About</a>
+						  </li>
+						  <li class="nav-item dropdown hiddenmenu">
+							<a class="nav-link dropdown-toggle dropdown-toggle-caret " data-bs-toggle="dropdown" href="https://www.tirupatisales.com/category">Category</a>
+							<div class="dropdown-menu dropdown-large-menu" style="padding-top: 0;padding-bottom: 0;">
+							  <div class="row">
+								<div class="col-12 col-xl-3" style="height: 430px;overflow-y: auto;border-right: 1px solid #e8e8e8;padding-left: 4px;padding-right: 0px;">
+								  <ul class="list-unstyled">
+									<li class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;background: #ed323712;"><a style="margin-right: 6px;color: #ed3237;font-weight: 600;"  href="https://www.tirupatisales.com/new-products/">New Products<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu1" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/cable">Cable<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu2" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/Prof.Lighting">Prof.Lighting<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu3" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/flp-product">FLP Product<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu4" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/lt-switchgear">LT Switchgear<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu5" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/industrial-fan">Industrial Fan<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu6" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/led-driver">LED Driver<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu9" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/switch-accessories">Switch & Accessories<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu11" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/lt-panel">LT Panel<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu19" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/earthing">Earthing<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu24" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/domestic-fan">Domestic Fan<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu102" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/lugs--glands">LUGS & GLANDS<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu105" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/cable-tie">CABLE TIE<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu252" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/cable-tray">Cable Tray<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu254" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/motors">MOTORS<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu257" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/conduit-pipes---metal-rcom-gi">CONDUIT PIPES / METAL RCOM GI<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu258" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/testng-instruments">TESTNG INSTRUMENTS<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu259" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/architecture-light">ARCHITECTURE LIGHT<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu260" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/general-maintanace-electrical-products">GENERAL MAINTANACE ELECTRICAL PRODUCTS<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																		<li id="menu265" onclick="btnCategory_Click(this.id);" class="nav-item dropdown cust-nav " style="padding: 12px;font-size: 12px;font-weight: 600;cursor: pointer;"><a style="margin-right: 6px;"  href="https://www.tirupatisales.com/categories/elv">ELV<span><i class="bx bx-chevron-right float-end"></i></span></a></li>
+																	  </ul>
+								</div>
+								<div class="col-12 col-xl-9" id="divSubCategory" style="height: 430px;padding: 15px;overflow-x: auto;"></div>
+							  </div>
+							</div>
+						  </li>
+
+						  <li class="nav-item dropdown d-lg-none">
+							<a class="nav-link dropdown-toggle dropdown-toggle-nocaret " data-bs-toggle="dropdown" href="javascript:;">Category<i class='bx bx-chevron-down ms-1'></i> </a>
+						
+								  <ul class="dropdown-menu" >
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/cable">Cable</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/Prof.Lighting">Prof.Lighting</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/flp-product">FLP Product</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/lt-switchgear">LT Switchgear</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/industrial-fan">Industrial Fan</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/led-driver">LED Driver</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/switch-accessories">Switch & Accessories</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/lt-panel">LT Panel</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/earthing">Earthing</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/domestic-fan">Domestic Fan</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/lugs--glands">LUGS & GLANDS</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/cable-tie">CABLE TIE</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/cable-tray">Cable Tray</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/motors">MOTORS</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/conduit-pipes---metal-rcom-gi">CONDUIT PIPES / METAL RCOM GI</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/testng-instruments">TESTNG INSTRUMENTS</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/architecture-light">ARCHITECTURE LIGHT</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/general-maintanace-electrical-products">GENERAL MAINTANACE ELECTRICAL PRODUCTS</a></li>
+																		<li  class="dropdown-item "><a style="color: #202223;font-size: 12px;font-weight: 400;line-height: 24px;" href="https://www.tirupatisales.com/categories/elv">ELV</a></li>
+																	  </ul>
+							
+						  </li>
+
+						 
+						  <!-- <li class="nav-item dropdown">
+						  <a class="nav-link dropdown-toggle dropdown-toggle-caret " data-bs-toggle="dropdown" href="https://www.tirupatisales.com/brands">Brands</a>
+							<div class="dropdown-menu dropdown-large-menu" style="padding-top: 0;">
+							  <div class="row" style="height: 430px;overflow-y: auto;border-right: 1px solid #e8e8e8;padding-left: 4px;padding-right: 0px;">
+								  
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="1">Cable</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/apar" style="font-size: 12px;padding-left: 0;font-weight: 400;">Apar</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/havells" style="font-size: 12px;padding-left: 0;font-weight: 400;">Havells</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/molex" style="font-size: 12px;padding-left: 0;font-weight: 400;">Molex</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/rr-kabel" style="font-size: 12px;padding-left: 0;font-weight: 400;">RR Kabel</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="2">Prof.Lighting</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/Bajaj" style="font-size: 12px;padding-left: 0;font-weight: 400;">Bajaj</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/havells" style="font-size: 12px;padding-left: 0;font-weight: 400;">Havells</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/philips" style="font-size: 12px;padding-left: 0;font-weight: 400;">Philips</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="3">FLP Product</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/nema" style="font-size: 12px;padding-left: 0;font-weight: 400;">Nema</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="4">LT Switchgear</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/delta" style="font-size: 12px;padding-left: 0;font-weight: 400;">Delta</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/elmeasure" style="font-size: 12px;padding-left: 0;font-weight: 400;">Elmeasure</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/indoasian" style="font-size: 12px;padding-left: 0;font-weight: 400;">Indoasian</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/legrand" style="font-size: 12px;padding-left: 0;font-weight: 400;">Legrand</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/siemens" style="font-size: 12px;padding-left: 0;font-weight: 400;">Siemens</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/tdk" style="font-size: 12px;padding-left: 0;font-weight: 400;">TDK</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="5">Industrial Fan</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/almonard" style="font-size: 12px;padding-left: 0;font-weight: 400;">Almonard</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="6">LED Driver</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/fulham" style="font-size: 12px;padding-left: 0;font-weight: 400;">Fulham</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/osram" style="font-size: 12px;padding-left: 0;font-weight: 400;">Osram</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/philips" style="font-size: 12px;padding-left: 0;font-weight: 400;">Philips</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="9">Switch & Accessories</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/amezzon" style="font-size: 12px;padding-left: 0;font-weight: 400;">AMEZZON</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/anchor" style="font-size: 12px;padding-left: 0;font-weight: 400;">Anchor</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/legrand" style="font-size: 12px;padding-left: 0;font-weight: 400;">Legrand</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/precision" style="font-size: 12px;padding-left: 0;font-weight: 400;">Precision</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="11">LT Panel</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/efra" style="font-size: 12px;padding-left: 0;font-weight: 400;">EFRA</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="19">Earthing</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/vasudha" style="font-size: 12px;padding-left: 0;font-weight: 400;">Vasudha</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="24">Domestic Fan</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/orient" style="font-size: 12px;padding-left: 0;font-weight: 400;">Orient</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="102">LUGS & GLANDS</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/hariya" style="font-size: 12px;padding-left: 0;font-weight: 400;">Hariya</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="105">CABLE TIE</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/kripson" style="font-size: 12px;padding-left: 0;font-weight: 400;">Kripson</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/tycab" style="font-size: 12px;padding-left: 0;font-weight: 400;">Tycab</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="252">Cable Tray</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/efra" style="font-size: 12px;padding-left: 0;font-weight: 400;">EFRA</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="254">MOTORS</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/bharat-bijlee" style="font-size: 12px;padding-left: 0;font-weight: 400;">Bharat Bijlee</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/bonvario" style="font-size: 12px;padding-left: 0;font-weight: 400;">Bonvario</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/delta" style="font-size: 12px;padding-left: 0;font-weight: 400;">Delta</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/havells" style="font-size: 12px;padding-left: 0;font-weight: 400;">Havells</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/siemens" style="font-size: 12px;padding-left: 0;font-weight: 400;">Siemens</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="257">CONDUIT PIPES / METAL RCOM GI</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/precision" style="font-size: 12px;padding-left: 0;font-weight: 400;">Precision</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="258">TESTNG INSTRUMENTS</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/meco" style="font-size: 12px;padding-left: 0;font-weight: 400;">Meco</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="259">ARCHITECTURE LIGHT</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/havells" style="font-size: 12px;padding-left: 0;font-weight: 400;">Havells</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="260">GENERAL MAINTANACE ELECTRICAL PRODUCTS</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/almonard" style="font-size: 12px;padding-left: 0;font-weight: 400;">Almonard</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/dowells" style="font-size: 12px;padding-left: 0;font-weight: 400;">Dowells</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/efra" style="font-size: 12px;padding-left: 0;font-weight: 400;">EFRA</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/precision" style="font-size: 12px;padding-left: 0;font-weight: 400;">Precision</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/rr-kabel" style="font-size: 12px;padding-left: 0;font-weight: 400;">RR Kabel</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/steelgrip" style="font-size: 12px;padding-left: 0;font-weight: 400;">Steelgrip</a></li>
+																							</ul>
+										</div>
+																			<div class="col-sm-6 col-md-2 col-xl-2" >
+											<div style="padding-top: 7px;padding-bottom: 7px;"><a style="font-size: 12px;font-weight: 600;color: #202223" id="265">ELV</a></div>
+											<ul class="list-unstyled">
+																																					<li><a href="https://www.tirupatisales.com/brand/gst" style="font-size: 12px;padding-left: 0;font-weight: 400;">GST</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/honeywell" style="font-size: 12px;padding-left: 0;font-weight: 400;">Honeywell</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/impact-honeywell" style="font-size: 12px;padding-left: 0;font-weight: 400;">IMPACT Honeywell</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/molex" style="font-size: 12px;padding-left: 0;font-weight: 400;">Molex</a></li>
+																									<li><a href="https://www.tirupatisales.com/brand/notifier-honewell" style="font-size: 12px;padding-left: 0;font-weight: 400;">NOTIFIER HONEWELL</a></li>
+																							</ul>
+										</div>
+											
+							  </div>
+							  
+							</div>
+
+						  </li> -->
+
+						
+
+						
+
+						  <!-- <li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/pricelist">Price List</a>
+						  </li> -->
+						  <li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/gallery">Gallery</a>
+						  </li>
+							<li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/blogs">Blogs</a>
+						  </li>
+						    <li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/career">Career</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/contact">Contact</a>
+						  </li>
+						   <li class="nav-item">
+							<a class="nav-link " href="https://www.tirupatisales.com/" target="_blank">Technical Guide</a>
+						  </li>
+					
+						</ul>
+					  </div>
+					</div>	
+				  </nav>
+			</div>
+		</div>
+		<!--end top header wrapper-->
+﻿<!--start slider section-->
+    <section class="slider-section">
+			<div class="first-slider p-0">
+
+				<div id="carousel" class="banner-slider owl-carousel owl-theme" >
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#ffffff">Wire & Cable</h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#ffffff">your one STOP solution</h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/all_types_of_wire_and_cable.webp" class="img-fluid" alt="Wire & Cable | your one STOP solution">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#000000"></h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#000000"></h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/MECO_instrument.webp" class="img-fluid" alt=" | ">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#ffffff"></h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#ffffff"></h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/Screenshot_2025-04-29_091154.png" class="img-fluid" alt=" | ">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#000000"></h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#000000"></h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/Motors.webp" class="img-fluid" alt=" | ">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#ffffff"></h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#ffffff"></h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/WEBSITE_SLIDE.webp" class="img-fluid" alt=" | ">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#400040">Incredibly strong</h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#400040">Various lengths and thicknesses.</h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/Untitled_design_11zon.webp" class="img-fluid" alt="Incredibly strong | Various lengths and thicknesses.">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#000000"></h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#000000"></h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/WEBSITE_SLIDE2.webp" class="img-fluid" alt=" | ">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#ffffff">Heavy Duty</h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#ffffff">Wide Angle Air Supply INDUSTRIAL STAND FAN</h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/fan11.webp" class="img-fluid" alt="Heavy Duty | Wide Angle Air Supply INDUSTRIAL STAND FAN">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#000000"></h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#000000"></h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/ELV1.webp" class="img-fluid" alt=" | ">
+							
+						</div>
+					</div>
+										<div class="item" >
+						<div class="position-relative">
+							<div class="slider-content-banner">
+								<!-- <img src="https://www.tirupatisales.com/site/images/White-Dot-1 .png" class="img-fluid img-slider-dots" alt="" > -->
+								<div class="dots-txt-pad" style="padding-top:40px">
+									<h3 class="h3 fw-bold  d-md-block slider-text-one" style="color:#ffffff">Your Home's Ultimate</h3>
+									<h1 class="h1 fw-bold slider-text-two" style="margin: 0;color:#ffffff">Safety Shield.</h1>
+							  	</div>
+							</div>
+							
+							<img class="slider-img-banner" style="" src="https://www.tirupatisales.com/uploads/images/8/11-1.webp" class="img-fluid" alt="Your Home's Ultimate | Safety Shield.">
+							
+						</div>
+					</div>
+									</div>
+
+			</div>
+		</section>
+		<!--end slider section-->
+
+				<section class="py-5 bg-light-gray">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-justify" >
+								<h5 class=" title_sm_red">We Are</h5>
+								<h5 class="  title_blue">Authorised Channel Partner & Stockist</h5>
+								<span>Step into a realm of authorized excellence with TirupatiSales. From leading lighting brands to trusted switchgear, wires, and cables manufacturers, we offer a curated selection of authorized brands to power your projects.</span>
+							</div>
+							<div class="col-md-12" style="margin-top: 1.5rem;">
+								<div id="brands-shops" class=" owl-carousel owl-theme">
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/3M.png" class="img-fluid" alt="3M">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Almanard.png" class="img-fluid" alt="Almonard">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Anchor.png" class="img-fluid" alt="Anchor">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Bajaj.png" class="img-fluid" alt="Bajaj">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Dowells.png" class="img-fluid" alt="Dowells">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/efra.png" class="img-fluid" alt="EFRA">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Elmeasure.png" class="img-fluid" alt="Elmeasure">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Epcos.png" class="img-fluid" alt="Epcos">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Finder.png" class="img-fluid" alt="Finder">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Fulham.png" class="img-fluid" alt="Fulham">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Havells.png" class="img-fluid" alt="Havells">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Honeywell.png" class="img-fluid" alt="Honeywell">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Indoasian.png" class="img-fluid" alt="Indoasian">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/K_lite.png" class="img-fluid" alt="K lite">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Ledvance.png" class="img-fluid" alt="Ledvance">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Legrand.png" class="img-fluid" alt="Legrand">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/MG_Electrica.png" class="img-fluid" alt="MG Electrica">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Molex.png" class="img-fluid" alt="Molex">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Nema.png" class="img-fluid" alt="Nema">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Osram.png" class="img-fluid" alt="Osram">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Philips.png" class="img-fluid" alt="Philips">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Precision.png" class="img-fluid" alt="Precision">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Prolite.png" class="img-fluid" alt="Prolite Autoglo">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Raychem.png" class="img-fluid" alt="Raychem">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/RR_Kabel.png" class="img-fluid" alt="RR Kabel">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Siemens.png" class="img-fluid" alt="Siemens">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/Steelgrip.png" class="img-fluid" alt="Steelgrip">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/transrail.png" class="img-fluid" alt="Transrail">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/Valmont.png" class="img-fluid" alt="Valmont">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/Vasudha.png" class="img-fluid" alt="Vasudha">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/Apar.png" class="img-fluid" alt="Apar">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/GST.png" class="img-fluid" alt="GST">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/Kripson.png" class="img-fluid" alt="Kripson">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/all/Meco.png" class="img-fluid" alt="Meco">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/TDK.png" class="img-fluid" alt="TDK">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/AMEZZON.png" class="img-fluid" alt="AMEZZON">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/tycab.png" class="img-fluid" alt="Tycab">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/orient-electric.png" class="img-fluid" alt="Orient">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/hariya.png" class="img-fluid" alt="Hariya">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/bharatbijli.png" class="img-fluid" alt="Bharat Bijlee">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/bb-removebg-preview.png" class="img-fluid" alt="Bonvario">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/delta.png" class="img-fluid" alt="Delta">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/notifier_honeywell.webp" class="img-fluid" alt="NOTIFIER HONEWELL">
+											</div>
+										</div>
+									
+									</div>
+																		<div class="item">
+										
+										<div class="item border-end">
+											<div class="p-4">
+													<img src="https://www.tirupatisales.com/uploads/images/12/IMPACK_1.webp" class="img-fluid" alt="IMPACT Honeywell">
+											</div>
+										</div>
+									
+									</div>
+																		</div>
+							
+								
+							</div>
+						</div>
+					</div>
+		</section>
+		
+						<section class="py-5 ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-justify" >
+						<h5 class=" title_sm_red ">Our</h5>
+						<h5 class="  title_blue">Categories</h5>
+						<span>Experience the pinnacle of electrical excellence with TirupatiSales. From quality lighting solutions to reliable switchgear, wires, and cables, we're your comprehensive source for top-tier electrical products. </span>
+					</div>
+					<div class="col-md-12" >
+						<div class="row" style="margin-top: 1.5rem;">
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/cable">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/CABLE.png" alt="CABLE.png"/>
+									<span style="" >Cable</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/Prof.Lighting">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/PROF_LIGHTING.png" alt="PROF.LIGHTING.png"/>
+									<span style="" >Prof.Lighting</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/flp-product">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/FLP_PRODUCT.png" alt="FLP PRODUCT.png"/>
+									<span style="" >FLP Product</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/lt-switchgear">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/LT_SWITCHGEAR.png" alt="LT SWITCHGEAR.png"/>
+									<span style="" >LT Switchgear</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/industrial-fan">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/INDUSTRIAL_FAN.png" alt="INDUSTRIAL FAN.png"/>
+									<span style="" >Industrial Fan</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/led-driver">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/LED_DRIVER.png" alt="LED DRIVER.png"/>
+									<span style="" >LED Driver</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/switch-accessories">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/SWITCH_ACCE_.png" alt="SWITCH & ACCE..png"/>
+									<span style="" >Switch & Accessories</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/lt-panel">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/LT_PANEL.png" alt="LT PANEL.png"/>
+									<span style="" >LT Panel</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/earthing">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/EARTHING.png" alt="EARTHING.png"/>
+									<span style="" >Earthing</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/domestic-fan">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/DOMESTIC_FAN.png" alt="DOMESTIC FAN.png"/>
+									<span style="" >Domestic Fan</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/lugs--glands">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/28_LUGS_GLANDS.png" alt="28.LUGS & GLANDS.png"/>
+									<span style="" >LUGS & GLANDS</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/cable-tie">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/Cable_Tie.png" alt="Cable Tie.png"/>
+									<span style="" >CABLE TIE</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/cable-tray">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/29_Cable_Tray.png" alt="29.Cable Tray.png"/>
+									<span style="" >Cable Tray</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/motors">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/30__MOTOR.png" alt="30. MOTOR.png"/>
+									<span style="" >MOTORS</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/conduit-pipes---metal-rcom-gi">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/31__CONDUIT_PIPES_METAL_RCOM_GI_PRECISION_BRAND.png" alt="31.  CONDUIT PIPES  METAL RCOM GI  PRECISION BRAND.png"/>
+									<span style="" >CONDUIT PIPES / METAL RCOM GI</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/testng-instruments">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/32_TESTNG_INSTRUMENTS_MECO.png" alt="32.TESTNG INSTRUMENTS MECO.png"/>
+									<span style="" >TESTNG INSTRUMENTS</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/architecture-light">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/33__ARCHITECTURE_LIGHT.png" alt="33. ARCHITECTURE LIGHT.png"/>
+									<span style="" >ARCHITECTURE LIGHT</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/general-maintanace-electrical-products">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/34_MRO.png" alt="34.MRO.png"/>
+									<span style="" >GENERAL MAINTANACE ELECTRICAL PRODUCTS</span>
+								</div>
+								</a>
+							</div>
+														<div class="col-md-2 m-0 p-0 " >
+								<a href="https://www.tirupatisales.com/categories/elv">
+								<div class="cat-content rounded-3 border">
+									<img class="img-fluid" src="https://www.tirupatisales.com/uploads/images/16/16__FIRE_SAFETY,_PA,.png" alt="16. FIRE & SAFETY, PA,.png"/>
+									<span style="" >ELV</span>
+								</div>
+								</a>
+							</div>
+													</div>
+					</div>
+				</div>
+			</div>
+		</section> 
+		
+
+		<!-- <section class="py-5">
+			<div class="container">
+								<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Cable</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/house-wire'>HOUSE WIRE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/multicore-wire'>MULTICORE WIRE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/speaker-wire'>SPEAKER WIRE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/camera-wire'>CAMERA WIRE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/telephone-wire'>TELEPHONE WIRE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/submersible-wire'>SUBMERSIBLE WIRE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/alu-cu-armd'>ALU/CU ARMD<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/shielded-cable'>SHIELDED CABLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/ht-armd-'>HT ARMD<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/only-rubber-cable'>ONLY RUBBER CABLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/only-jelly-field-armd-'>ONLY JELLY FIELD ARMD<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/cat-6-lan'>CAT 6 LAN<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/control-cable'>CONTROL CABLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/welding-cable'>Welding cable<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/instrumentation-cable'>INSTRUMENTATION CABLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/fire-survival-cables'>FIRE SURVIVAL CABLES<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/elastomeric-battery-cable'>ELASTOMERIC BATTERY CABLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/solar-cable'>SOLAR CABLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/awm-cable'>AWM CABLE<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Prof.Lighting</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/industrial-lighting'>INDUSTRIAL LIGHTING<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">FLP Product</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-dol-starter'>FLP DOL Starter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-local-control-station-with-ammeter'>FLP Local Control Station With Ammeter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-push-button-start-stop-with-indicating-lamp'>FLP Push Button Start Stop With Indicating Lamp<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-limit-switch'>FLP Limit Switch<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-rotary-switch'>FLP Rotary Switch<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-aviation-light'>FLP Aviation Light<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-reactor-vessel-lamp'>FLP Reactor Vessel Lamp<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-power-distribution-board'>FLP Power Distribution Board<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-well-glass-fitting'>FLP Well Glass Fitting<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-led-tube-light'>FLP Led Tube Light<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-hand-lamp'>FLP Hand Lamp<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-junction-box'>FLP Junction Box<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flp-junction-box-130-dia'>FLP Junction Box 130 DIA<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">LT Switchgear</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/soft-starter'>Soft Starter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/dol-starter'>DOL Starter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/star-delta-starter'>Star Delta Starter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/electronic-timers'>Electronic timers<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/plug-in-relays'>Plug-in-relays<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/indicating-lamps'>Indicating lamps<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/push-button'>Push button<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/push-button-stations'>Push button stations<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/limit-switch'>Limit Switch<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/simocode'>Simocode<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/acb-air-circuit-breaker-'>ACB(Air circuit breaker)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/mccb--moulded-case-circuit-breaker-'>MCCB (Moulded case circuit breaker)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/sfu--switch-fuse-unit-'>SFU (Switch fuse unit)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/control-switches'>Control switches<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/capacitor-duty-contactors'>Capacitor duty contactors<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/hrc-fuse'>HRC Fuse<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/semiconductor-fuse'>Semiconductor Fuse<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/mcb--miniature-circuit-breaker-'>MCB (Miniature Circuit Breaker)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/rccb--residual-current-circuit-breaker-'>RCCB (Residual Current Circuit Breaker)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/rcbo--residual-current-breaker-operator-'>RCBO (Residual Current Breaker Operator)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/change-over-s-w'>CHANGE OVER S/W<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/distribution-box'>DISTRIBUTION BOX<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/power-contactor'>Power Contactor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/overload-relay'>Overload Relay<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/mpcb-motor-protection-circuit-breakers-'>MPCB(Motor protection circuit breakers)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/endc--box-type-normal-duty--capacitor'>ENDC (Box type Normal Duty) CAPACITOR<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/ehdll--box-type-heavy-duty--capacitor'>EHDLL (Box Type heavy duty) CAPACITOR<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/phicap-hdd---cylindrical-heavy-duty--capacitor'>Phicap HDD ( Cylindrical Heavy duty) CAPACITOR<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/phase-cap-shd--cylindrical-super-heavy-duty--capacitor'>Phase cap SHD (Cylindrical Super heavy Duty) CAPACITOR<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/app--box-type-oil-filled-capacitor--capacitor'>APP (Box type Oil filled capacitor) CAPACITOR<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/motor-running-capacitor-plastic-body-with-wire--mfd-'>Motor running capacitor plastic Body with Wire (MFD)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/motor-running-capacitor-metal-body-with-lug'>Motor running capacitor Metal Body with lug<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/motor-starting-capacitor--mfd-'>Motor Starting capacitor (MFD)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/lighting-capacitor'>Lighting capacitor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/ups-inverter-capacitor'>UPS/Inverter capacitor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/single-ct-sensing--4-6-8-12-16-stage---power-factor-controller-'>Single Ct Sensing (4/6/8/12/16 Stage) (Power Factor Controller)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/three-ct-sensing--8-16-step---power-factor-controller-'>Three CT Sensing (8/16 Step) (Power Factor Controller)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/cap-duty-contactor'>Cap-Duty contactor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/thyristor-switching-module'>Thyristor Switching Module<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/reactor'>Reactor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/active-harmonic-filter'>Active Harmonic Filter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/static-var-generator'>Static Var Generator<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/vaccum-contactor'>Vaccum Contactor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/automatic-change-over-with-current-limiter--accl-'>Automatic Change Over with Current limiter (ACCL)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/automatic-transfer-switch--ats-'>Automatic Transfer Switch (ATS)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/manual-transfer-switch--mts-'>Manual Transfer Switch (MTS)<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/basic-panel-meter'>Basic Panel meter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/high-profile-multifunction-meter'>High profile Multifunction Meter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/power-quality-analyser'>Power Quality Analyser<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/demand-controller'>Demand Controller<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/dc-energy-meter'>DC Energy Meter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/branch-circuit-power-meter'>Branch Circuit power meter<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/three-phase-smart-meters'>Three Phase Smart Meters<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/transducer-isoletors'>Transducer/Isoletors<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/cbct-earth-leakage-relay'>CBCT/Earth leakage relay<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/power-factor-controller'>Power Factor Controller<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/network-gateways'>Network Gateways<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/contactor'>Contactor<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Industrial Fan</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/industrial-fans'>FANS<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">LED Driver</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/indoor-drivers'>Indoor Drivers<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Switch & Accessories</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/angle-holder-pc'>ANGLE HOLDER PC<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/batten-holder-pc'>BATTEN HOLDER PC<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/6a-16a-s-s-combined'>6A/16A S.S.COMBINED<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/6a-16a-s-s-combined-with-back-box'>6A/16A S.S.COMBINED WITH BACK BOX<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/2-pin-top-pc'>2 PIN TOP PC<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/2-pin-male-female-pc'>2 PIN MALE FEMALE PC<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/pendent-holder-white'>PENDENT HOLDER WHITE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/multi-pendent-holder-white'>MULTI PENDENT HOLDER WHITE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/mini-pendent-holder-black'>MINI PENDENT HOLDER BLACK<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/6a-3-pin-top-pc'>6A 3 PIN TOP PC<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/16a-3-pin-top-pc'>16A 3 PIN TOP PC<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/conversion-plug-06a'>CONVERSION PLUG 06A<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/conversion-plug-06a-to-16a'>CONVERSION PLUG 06A TO 16A<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/multiplug-6a-3pin'>MULTIPLUG 6A 3PIN<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/mini-multiplug-6a-3pin'>MINI MULTIPLUG 6A 3PIN<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/pvc-conduit-pipe'>PVC CONDUIT PIPE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/casing-caping'>CASING CAPING<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/duct-patti'>DUCT PATTI<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flexibal-pipes'>FLEXIBAL PIPES<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/pvc-coupler-'>PVC COUPLER<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/slip-type-bend--'>SLIP TYPE BEND<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/space-bar-saddle'>SPACE BAR SADDLE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/elbow'>ELBOW<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/tee'>TEE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/one-way-junction-box'>ONE WAY JUNCTION BOX<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/two-way-junction-box'>TWO WAY JUNCTION BOX<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/three-way-junction-box'>THREE WAY JUNCTION BOX<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/four-way-junction-box'>FOUR WAY JUNCTION BOX<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/roma-switch'>ROMA SWITCH<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/penta-switch'>PENTA SWITCH<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/roma--switch'>ROMA+ SWITCH<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/living-now'>LIVING NOW<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/myrius-nextgen'>Myrius Nextgen<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/plexo'>Plexo<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/popup'>Popup<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/allzy'>Allzy<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/arteor'>Arteor<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/tempra-plug-socket'>Tempra plug socket<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/lyncus'>Lyncus<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">LT Panel</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/apfc-panel'>APFC PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/pcc-panel'>PCC PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/mcc-panel'>MCC PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/lighting-panel'>LIGHTING PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/elr-panel'>ELR PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/high-mast-panel'>HIGH MAST PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/plug-socket-utility-panel'>PLUG SOCKET UTILITY PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/feeder-panel'>FEEDER PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/control-panel'>CONTROL PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/dol-starter-panel'>DOL STARTER PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/vfd-panel'>VFD PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/sfu-panel'>SFU PANEL<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Earthing</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/copper-coated-solid-rod-earthing-electrode'>COPPER COATED SOLID ROD EARTHING ELECTRODE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/flat-in-pipe-earthing-electrode'>FLAT IN PIPE EARTHING ELECTRODE<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/copper-plate---strip---wire-weight'>COPPER PLATE / STRIP / WIRE WEIGHT<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/hygrolite-chemical-bag'>HYGROLITE CHEMICAL BAG<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/gi-plate---strip---wire-weight'>GI PLATE / STRIP / WIRE WEIGHT<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/lighting-arrestor'>LIGHTING ARRESTOR<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/ms-earthing-clamp'>MS EARTHING CLAMP<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/frp-chamber-cover-round'>FRP CHAMBER COVER ROUND<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/rcc-chamber-with-cover'>RCC CHAMBER WITH COVER<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/ci-chamber-cover'>CI CHAMBER COVER<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Domestic Fan</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/fans'>FANS<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">LUGS & GLANDS</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/lugs'>Lugs<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/glands'>Glands<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">CABLE TIE</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/cable-ties'>Cable tie<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">Cable Tray</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/tray-and-cover'>Tray and Cover<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">MOTORS</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/motor'>MOTORS<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/gearbox'>GEARBOX<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">CONDUIT PIPES / METAL RCOM GI</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/pipe---accessories'>PIPE & ACCESSORIES<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">TESTNG INSTRUMENTS</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/instruments'>INSTRUMENTS<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">ARCHITECTURE LIGHT</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/lighting'>Lighting<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">GENERAL MAINTANACE ELECTRICAL PRODUCTS</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/mro-products'>MRO Products<a>				 </div>
+				 				<div class="pb-3">
+					<span class="mb-0 fw-bold text-uppercase">ELV</span> : 
+						<a style='color:#202223' href='https://www.tirupatisales.com/categories/fire-system'>FIRE SYSTEM<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/cat-6--patch-coad---patch-panel-'>CAT 6, PATCH COAD & PATCH PANEL<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/pa-system'>PA SYSTEM<a> | <a style='color:#202223' href='https://www.tirupatisales.com/categories/cctv-'>CCTV<a>				 </div>
+				 			</div>
+		</section> -->
+			
+	</div>
+</div>﻿	<!--start footer section-->
+    <footer style="margin-top: -21px;">
+			<section class="py-5 border-top bg-light">
+				<div class="container">
+					<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+						<div class="col">
+							<div class="footer-section1">
+								<h5 class="mb-4 text-uppercase fw-bold">Contact Info</h5>
+								<div class="address mb-3">
+									<h6 class="mb-0 text-uppercase fw-bold">Office Address</h6>
+									<p class="mb-0">Plot No. 52-53, Soma Kanji ni wadi, Udhna-Citylight BRTS Canal Road,, Near Savera Complex, Khatodara, Surat-395002, Gujarat India. </p>
+								</div>
+								<div class="address mb-3">
+									<h6 class="mb-0 text-uppercase fw-bold">Warehouse Address</h6>
+									<p class="mb-0">Plot no 195, Ichhapore GIDC, Bhatpore, Limla, Surat-394510, Gujarat India. </p>
+								</div>
+								<div class="phone mb-3">
+									<h6 class="mb-0 text-uppercase fw-bold">Phone</h6>
+									<p class="mb-0">+91 92279 15114</p>
+                                    <p class="mb-0">+91 0261 2704000</p>
+									
+								</div>
+								<div class="email mb-3">
+									<h6 class="mb-0 text-uppercase fw-bold">Email</h6>
+									<p class="mb-0"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d0e1c11180e3d09140f080d1c09140e1c11180e531e1210">[email&#160;protected]</a></p>
+								</div>
+								<div class="working-days mb-3">
+									<h6 class="mb-0 text-uppercase fw-bold">WORKING DAYS</h6>
+									<p class="mb-0">Mon - Sat / 08:45 AM - 06:30 PM </p>
+									<span class="mb-0 font-12">Indian Standard Time (IST)</span>
+								</div>
+                               
+							</div>
+						</div>
+						<div class="col">
+							<div class="footer-section2">
+								<h5 class="mb-4 text-uppercase fw-bold">Categories</h5>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/cable"> Cable</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/Prof.Lighting"> Prof.Lighting</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/flp-product"> FLP Product</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/lt-switchgear"> LT Switchgear</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/industrial-fan"> Industrial Fan</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/led-driver"> LED Driver</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/switch-accessories"> Switch & Accessories</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/lt-panel"> LT Panel</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/earthing"> Earthing</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/domestic-fan"> Domestic Fan</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/lugs--glands"> LUGS & GLANDS</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/cable-tie"> CABLE TIE</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/cable-tray"> Cable Tray</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/motors"> MOTORS</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/conduit-pipes---metal-rcom-gi"> CONDUIT PIPES / METAL RCOM GI</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/testng-instruments"> TESTNG INSTRUMENTS</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/architecture-light"> ARCHITECTURE LIGHT</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/general-maintanace-electrical-products"> GENERAL MAINTANACE ELECTRICAL PRODUCTS</a>, </li>
+																	<a style="font-size: 12px;color: #202223;"  href="https://www.tirupatisales.com/categories/elv"> ELV</a></li>
+																<!-- <ul class="list-unstyled">
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Cable</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Prof.Lighting</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> FLP Product</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> LT Switchgear</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Industrial Fan</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> LED Driver</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Switch & Accessories</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> LT Panel</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Earthing</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Domestic Fan</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> LUGS & GLANDS</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> CABLE TIE</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> Cable Tray</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> MOTORS</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> CONDUIT PIPES / METAL RCOM GI</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> TESTNG INSTRUMENTS</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> ARCHITECTURE LIGHT</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> GENERAL MAINTANACE ELECTRICAL PRODUCTS</a></li>
+																		<li class="mb-1"><a style="font-size: 12px;" class="d-flex" href="javascript:;"><i class='bx bx-chevron-right'></i> ELV</a></li>
+																	</ul> -->
+							</div>
+						</div>
+						<div class="col">
+							<div class="footer-section2">
+								<h5 class="mb-4 text-uppercase fw-bold">Quick Links</h5>
+								<ul class="list-unstyled">
+									<li class="mb-1"><a style="font-size: 12px;" href="https://www.tirupatisales.com/contact"><i class='bx bx-chevron-right'></i> Contact</a></li>	
+									<li class="mb-1"><a style="font-size: 12px;" href="javascript:;"><i class='bx bx-chevron-right'></i> Careers</a></li>
+									<li class="mb-1"><a style="font-size: 12px;" href="javascript:;"><i class='bx bx-chevron-right'></i> Terms & Conditions</a></li>
+									<li class="mb-1"><a style="font-size: 12px;" href="javascript:;"><i class='bx bx-chevron-right'></i> Privacy Policy</a></li>
+									<li class="mb-1"><a style="font-size: 12px;" href="javascript:;"><i class='bx bx-chevron-right'></i> Sitemap</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col">
+							<div class="footer-section3">
+								<h5 class="mb-4 text-uppercase fw-bold">Follow Us</h5>
+								<div class="working-days mb-3">
+									 <a class="mysocial" target="_blank" href="https://www.facebook.com/TirupatiSalesCorporation/"><i class="bx bxl-facebook"></i></a>																		 <a class="mysocial" target="_blank" href="https://www.instagram.com/tirupati_sales/"><i class="bx bxl-instagram"></i></a>									 <a class="mysocial" target="_blank" href="https://www.linkedin.com/company/79728230/admin/feed/posts/"><i class="bx bxl-linkedin"></i></a>																		 <a class="mysocial" target="_blank" href="https://api.whatsapp.com/send?phone=919227915114"><i class="bx bxl-whatsapp"></i></a>								</div>
+							</div>
+						</div>
+					</div>
+					<!--end row-->
+				</div>
+			</section>
+
+			<section class="footer-strip text-center py-3 border-top positon-absolute bottom-0">
+				<div class="container">
+					<div class="d-flex flex-column flex-lg-row align-items-center gap-3 justify-content-between">
+						<p class="mb-0">Copyright © Tirupati Sales Corporation 2026. All right reserved.</p>
+						<div class="payment-icon">
+						
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</footer>
+
+	
+		<a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+		<a href="https://api.whatsapp.com/send?phone=919227915114" class="whatsapp-link"><i class='bx bxl-whatsapp'></i></a>
+		
+	</div>
+
+	
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.tirupatisales.com/site/js/jquery.lightbox.js"></script>
+	<script src="https://www.tirupatisales.com/site/js/lightbox.js"></script>
+	<script src="https://www.tirupatisales.com/site/plugins/OwlCarousel/js/owl.carousel.min.js"></script>
+	<script src="https://www.tirupatisales.com/site/plugins/OwlCarousel/js/owl.carousel2.thumbs.min.js"></script>
+	<script src="https://www.tirupatisales.com/site/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!--app JS-->
+	<script src="https://www.tirupatisales.com/site/js/app.js"></script>
+	<script src="https://www.tirupatisales.com/site/js/index1.js"></script>
+	
+	<script>
+
+		var FilterTextBox = $("#txtSearch");
+		var timer = null;
+        FilterTextBox.on('keydown', function(e){
+            clearTimeout(timer); 
+            timer = setTimeout(SearchProduct, 800);
+        });
+
+		function ResetSearch()
+		{
+			$("#divSearch_Product").html("");
+			var InnerHtml = '<li  class="dropdown-item" id="divSearch_NoData" style="display:none"><div style="display: flex;align-items: center;justify-content: center;"><span style="margin-left: 4px;font-size: 14px;font-weight: 600;"  class="search_text">No product found</span></div></li><li  class="dropdown-item" id="divSearch_Loading" style="display:none"><div style="display: flex;align-items: center;justify-content: center;"><img style="height: 16px;margin-right: 0;" class="search_img" src="https://www.tirupatisales.com/admin/spinner_large.gif"/><span style="font-size: 14px;font-weight: 600;" class="search_text">Please wait</span></div></li>';
+			$("#divSearch_Product").html(InnerHtml);
+		}
+
+		function btnSearch_Click()
+		{
+			SearchProduct();
+		}
+
+		function SearchProduct()
+		{
+			ResetSearch();
+			var SearchText = $("#txtSearch").val();
+			$.ajax({   
+			url:"https://www.tirupatisales.com/site/search/product",
+			method:"POST",  
+			data:{
+				'SearchText':SearchText,
+			},
+			beforeSend:function(){
+				$("#divSearch_Loading").show();
+				$("#divSearch_NoData").hide();
+			},
+			success: function(response){ 
+				var json = jQuery.parseJSON(response); 
+				if(json.Products_Found == "False")
+				{     
+					$("#divSearch_Loading").hide();
+					$("#divSearch_NoData").show();
+				}    
+				else
+				{
+					$("#divSearch_Loading").hide();
+					$("#divSearch_NoData").hide();
+					var result = json.Products;
+					for(products in result)
+					{
+						var Slug = result[products].Slug;
+						var Name = result[products].Name;
+						var ImagePath = result[products].Image_Path;
+
+						var tr = "<li class='dropdown-item'>";
+						tr+= '<a href="https://www.tirupatisales.com/product/detail/'+Slug+'">';
+						tr += "<div style='display: flex;align-items: center;'>";       
+						tr+= '<img class="search_img" src="https://www.tirupatisales.com/'+ImagePath+'"/>' ;
+						tr+= '<span class="search_text">'+Name+'</span>' ; 
+						tr += "</div>";     
+						tr +="</a>"      
+						tr += "</li>";
+						$('#divSearch_Product').append(tr);
+					}
+					
+				}  
+				
+			},
+			});
+		}
+
+		function btnCategory_Click(id)
+		{
+			id =  id.substring(4);
+        	$.ajax({
+            type: "POST",
+            url : 'https://www.tirupatisales.com/category/list/for_menu',
+            data:{
+                'Product_Category_Id':id,
+            },
+            beforeSend:function(){
+                
+            },
+                success: function(data){
+					$(".cust-nav").removeClass("cust-nav-active");
+                   $("#divSubCategory").html("");
+				   $("#divSubCategory").html(data);
+				   $("#menu"+id).addClass("cust-nav-active");
+				   
+                },
+
+            });
+		}
+
+					
+			btnCategory_Click('menu1');
+		
+	(function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
+
+	jQuery("#carousel").owlCarousel({
+		autoplay: true,
+		rewind: true, /* use rewind if you don't want loop */
+		margin: 20,
+		/*
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		*/
+		responsiveClass: true,
+		autoHeight: true,
+		autoplayTimeout: 7000,
+		smartSpeed: 800,
+		nav: true,
+		dots:true,
+		responsive: {
+			0: {
+			items: 1
+			},
+
+			600: {
+			items: 1
+			},
+
+			1024: {
+			items: 1
+			},
+
+			1366: {
+			items: 1
+			}
+		}
+	});
+	</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"14f75446e0df4a5da302b87b40ab6118","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+

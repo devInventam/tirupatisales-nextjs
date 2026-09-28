@@ -1,0 +1,143 @@
+# Tirupati Sales Corporation — Website LLM Reference
+
+## Company Overview
+Tirupati Sales Corporation is one of India's largest and most trusted electrical distributors and service companies, established in 1993 and headquartered in Surat, Gujarat, India. The company serves infrastructure, industrial, and government projects across India with a focus on Electrical, ELV (Extra Low Voltage), and Industrial MRO (Maintenance, Repair & Operations) product segments.
+
+- Founded: 1993
+- Location: Plot No. 52-53, Soma Kanji ni Wadi, Udhna-Citylight BRTS Canal Road, Surat-395002, Gujarat, India
+- Annual Group Turnover: ₹600+ Crore (6000+ Million INR)
+- Employees: 200+ trained experts
+- Brand Partners: 36+ authorized global electrical brands
+- Experience: 30+ years
+- Email: sales@tirupatisales.com
+- Phone: +91 92279 15114
+- Mobile: +91 98251 48878
+- Landline: 0261 270 4000
+- Facebook: https://www.facebook.com/TirupatiSalesCorporation
+- Instagram: https://www.instagram.com/tirupati_sales
+- LinkedIn: https://in.linkedin.com/company/tirupatisales
+
+---
+
+## Website Structure & Pages
+
+### 1. Home Page — `/`
+The main landing page. Contains:
+- **Hero Carousel** — full-screen image slideshow of products (slides managed via Strapi CMS, autoplay speed controllable from backend)
+- **Company Highlight Bar** — company name, year established, hero tagline, annual turnover, manpower count, product segments
+- **Trust Factors Section** — animated stat cards: Years of Experience, Authorized Brand Partners, Turnover, Trained Experts
+- **Product Categories (Bento Grid)** — visual grid of all product parent categories
+- **Brand Partners / Logos** — scrolling carousel of partner brand logos
+- **Happy Clients Section** — scrolling carousel of client logos (autoplay speed controllable from backend)
+- **Notification Popup** — shows latest product launches, events, and training announcements
+
+### 2. About Us — `/about`
+Contains:
+- **Company Vision** — mission, vision, and core values
+- **Infrastructure Section** — highlights of company infrastructure
+- **Associated Companies** — group companies and associated brands
+
+### 3. Products — `/products/:categorySlug` and `/products/:categorySlug/:subcategorySlug`
+Dynamic product catalog pages. Contains:
+- Category and subcategory filtering
+- Product cards with images, brand, name
+- Product detail view with technical data, applications, properties, key features, PDF links
+
+### 4. Technical Guides — `/technical-guides`
+PDF and video resource library. Contains:
+- Category filter tabs (Cable, Lights, Pipe, Power Factor, etc.)
+- Cards grouped by category
+- Each card can be a PDF (View + Download buttons) or a Video (Watch button with auto-thumbnail from YouTube)
+- Cards support custom thumbnail images uploaded via CMS
+
+### 5. Image Gallery — `/gallery`
+Photo gallery of company events, projects, and infrastructure. Albums managed via Strapi CMS with category filtering.
+
+### 6. Blog & News — `/blog`
+Articles and news. Each post has title, excerpt, content, image, author, date, category, and read time. Supports both blog posts and news articles.
+
+### 7. Careers — `/careers`
+Job listings page. Features:
+- Filter by department and location
+- Job cards with type (Full Time / Part Time), department, location, and description
+- Apply button opens application modal with resume upload
+- General application form for unlisted roles
+
+### 8. Contact — `/contact`
+Contact form and company details. Features:
+- Inquiry form: name, company name, mobile, email, remark, file attachment
+- Contact cards with phone, email, address
+- Submits directly to Strapi CMS
+
+### 9. Group Companies — `/group-companies`
+Lists all group companies under the Tirupati Sales umbrella with name, category, address, contact details, and images.
+
+---
+
+## Product Segments
+
+The website covers these main product segments:
+
+1. **Electrical** — Switchgear, cables, wires, panels, measuring instruments, power capacitors, lighting
+2. **ELV (Extra Low Voltage)** — Low voltage systems, security, networking
+3. **Industrial MRO** — Motors, drives, automation components, maintenance products
+
+Product categories and subcategories are fully managed via Strapi CMS and displayed dynamically.
+
+---
+
+## CMS (Content Management System)
+The website uses **Strapi v5** as its headless CMS (backend at port 1337). All content is managed from the Strapi admin panel.
+
+### Content Types managed in Strapi:
+
+| Content Type | Purpose |
+|---|---|
+| Slide | Hero carousel images on homepage |
+| Company Info | Company stats, taglines, carousel speeds, happy client count |
+| Product Category | Top-level product categories |
+| Product Subcategory | Sub-categories under each parent category |
+| Product | Individual product listings |
+| Brand | Partner brand logos |
+| Client | Happy client logos and details |
+| Blog | Blog posts and news articles |
+| Technical Guide | PDF guides and video links for technical resources |
+| Gallery Category | Gallery album categories |
+| Gallery Album | Photo albums with multiple images |
+| Job | Career job listings |
+| Job Application | Submitted job applications |
+| Inquiry | Contact form submissions |
+| Newsletter Subscriber | Email subscribers |
+| Notification | Popup notifications for product launches and events |
+| Company Value | Core values listed on About page |
+| Group Company | Group companies listed on group page |
+| Infrastructure Item | Infrastructure highlights on About page |
+| Footer | Footer content — address, contact, social links |
+
+---
+
+## Key Features
+
+- **Fully CMS-driven** — all text, images, products, and settings are editable from Strapi admin without touching code
+- **Carousel speed control** — hero and happy clients carousel autoplay speed adjustable from Company Info in CMS
+- **Happy clients count** — editable from Company Info in CMS
+- **Technical guides** — supports both PDF upload and YouTube/Vimeo video URL with auto-thumbnail extraction
+- **SEO** — every page has title, description, keywords, and JSON-LD structured data
+- **Newsletter subscription** — email capture in footer saved to Strapi
+- **Job applications** — resume upload supported, saved to Strapi
+- **Contact form** — file attachment supported, saved to Strapi
+- **Notification popups** — time-limited announcements managed from CMS
+- **Fallback data** — all sections have static fallback data if Strapi is unreachable
+
+---
+
+## Tech Stack
+
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router v6
+- **Animation**: Framer Motion, React Spring
+- **Carousel**: Embla Carousel + embla-carousel-autoplay
+- **Backend/CMS**: Strapi v5
+- **Database (local)**: SQLite | **Database (production)**: PostgreSQL
+- **Icons**: Lucide React
