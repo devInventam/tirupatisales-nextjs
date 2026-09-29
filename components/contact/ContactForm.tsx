@@ -34,7 +34,7 @@ export function ContactForm() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -53,7 +53,11 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.mobile.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.mobile.trim()
+    ) {
       setErrorMessage("Please fill in all required fields.");
       setSubmitState("error");
       return;
@@ -71,7 +75,7 @@ export function ContactForm() {
         remark: formData.remark.trim(),
       },
       attachment || undefined,
-      turnstileToken
+      turnstileToken,
     );
 
     if (result.success) {
@@ -88,7 +92,8 @@ export function ContactForm() {
     } else {
       setSubmitState("error");
       setErrorMessage(
-        result.error || "Failed to submit your inquiry. Please try again or reach us by phone."
+        result.error ||
+          "Failed to submit your inquiry. Please try again or reach us by phone.",
       );
     }
   };
@@ -100,8 +105,9 @@ export function ContactForm() {
           Send Us an Inquiry
         </h2>
         <p className="mt-2 text-sm text-slate-600">
-          Have questions regarding industrial switchgear, custom panels, pricing or tenders?
-          Fill out the form below and our technical sales team will assist you.
+          Have questions regarding industrial switchgear, custom panels, pricing
+          or tenders? Fill out the form below and our technical sales team will
+          assist you.
         </p>
       </div>
 
@@ -112,8 +118,8 @@ export function ContactForm() {
           <div>
             <h4 className="text-sm font-bold">Inquiry Sent Successfully!</h4>
             <p className="mt-0.5 text-xs text-emerald-700">
-              Thank you for reaching out. A copy has been routed to our technical engineering
-              desk. We will respond within 1 business day.
+              Thank you for reaching out. A copy has been routed to our
+              technical engineering desk. We will respond within 1 business day.
             </p>
           </div>
         </div>
@@ -272,11 +278,6 @@ export function ContactForm() {
               )}
             </div>
           </div>
-        </div>
-
-        {/* Turnstile */}
-        <div className="pt-2">
-          <Turnstile onToken={setTurnstileToken} />
         </div>
 
         {/* Submit button */}

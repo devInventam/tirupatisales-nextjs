@@ -41,8 +41,9 @@ export default async function GalleryPage() {
         let imgNum: number;
         if (showName) {
           imgNum =
-            allImages.filter((i) => i.subSection === subSection && i.section === section)
-              .length + 1;
+            allImages.filter(
+              (i) => i.subSection === subSection && i.section === section,
+            ).length + 1;
         } else {
           flatCounter[section] = (flatCounter[section] ?? 0) + 1;
           imgNum = flatCounter[section];
@@ -56,7 +57,9 @@ export default async function GalleryPage() {
           category: section,
           section: section,
           subSection: subSection,
-          year: album.date ? new Date(album.date).getFullYear().toString() : "2024",
+          year: album.date
+            ? new Date(album.date).getFullYear().toString()
+            : "2024",
         });
       });
     }
@@ -69,16 +72,12 @@ export default async function GalleryPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-400 backdrop-blur-sm">
-              <Images className="h-3.5 w-3.5" />
-              Visual Journey
-            </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Life at Tirupati Sales Corporation
             </h1>
             <p className="mt-4 text-base text-slate-300 sm:text-lg">
-              Take a visual tour through our smart corporate offices, 1,00,000 sq. ft.
-              logistics hub in Hazira, engineering activities, and celebratory gatherings.
+              Take a visual tour through our smart corporate offices. logistics
+              hub in Hazira, engineering activities, and celebratory gatherings.
             </p>
           </div>
         </div>

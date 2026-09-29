@@ -19,12 +19,14 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
 
   // Extract unique departments & locations
   const allDepartments = useMemo(
-    () => Array.from(new Set(initialJobs.map((j) => j.department).filter(Boolean))),
-    [initialJobs]
+    () =>
+      Array.from(new Set(initialJobs.map((j) => j.department).filter(Boolean))),
+    [initialJobs],
   );
   const allLocations = useMemo(
-    () => Array.from(new Set(initialJobs.map((j) => j.location).filter(Boolean))),
-    [initialJobs]
+    () =>
+      Array.from(new Set(initialJobs.map((j) => j.location).filter(Boolean))),
+    [initialJobs],
   );
 
   // Cascading options
@@ -37,8 +39,8 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
           initialJobs
             .filter((j) => j.location === selectedLocation)
             .map((j) => j.department)
-            .filter(Boolean)
-        )
+            .filter(Boolean),
+        ),
       ),
     ];
   }, [selectedLocation, allDepartments, initialJobs]);
@@ -52,8 +54,8 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
           initialJobs
             .filter((j) => j.department === selectedDepartment)
             .map((j) => j.location)
-            .filter(Boolean)
-        )
+            .filter(Boolean),
+        ),
       ),
     ];
   }, [selectedDepartment, allLocations, initialJobs]);
@@ -77,7 +79,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
         : new Set(
             initialJobs
               .filter((j) => j.department === dept)
-              .map((j) => j.location)
+              .map((j) => j.location),
           );
     if (selectedLocation !== "All" && !valid.has(selectedLocation)) {
       setSelectedLocation("All");
@@ -92,7 +94,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
         : new Set(
             initialJobs
               .filter((j) => j.location === loc)
-              .map((j) => j.department)
+              .map((j) => j.department),
           );
     if (selectedDepartment !== "All" && !valid.has(selectedDepartment)) {
       setSelectedDepartment("All");
@@ -109,16 +111,19 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header bar */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-orange-800">
-              <Sparkles className="h-3.5 w-3.5 text-orange-600" />
-              Open Positions
-            </span>
+          {/* <div className="flex items-center gap-3">
             <span className="text-sm font-medium text-slate-500">
-              Showing <span className="font-bold text-slate-800">{filteredJobs.length}</span> of{" "}
-              <span className="font-bold text-slate-800">{initialJobs.length}</span> vacancies
+              Showing{" "}
+              <span className="font-bold text-slate-800">
+                {filteredJobs.length}
+              </span>{" "}
+              of{" "}
+              <span className="font-bold text-slate-800">
+                {initialJobs.length}
+              </span>{" "}
+              vacancies
             </span>
-          </div>
+          </div> */}
 
           {/* Quick Filter Reset */}
           {(selectedDepartment !== "All" || selectedLocation !== "All") && (
@@ -139,7 +144,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
           {/* Main Job Listing (8 cols) */}
           <div className="lg:col-span-8">
             {/* Filter controls */}
-            <div className="mb-6 flex flex-wrap items-center gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
+            <div className="mb-6 flex flex-wrap items-center gap-4 sm:gap-6 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400">
                 <Filter className="h-4 w-4" /> Filters:
               </div>
@@ -148,7 +153,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
               <div className="flex items-center gap-2">
                 <label
                   htmlFor="career-dept"
-                  className="text-xs font-medium text-slate-600"
+                  className="text-xs font-medium text-slate-600 shrink-0"
                 >
                   Department:
                 </label>
@@ -156,7 +161,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
                   id="career-dept"
                   value={selectedDepartment}
                   onChange={(e) => handleDepartmentChange(e.target.value)}
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 outline-none transition focus:border-orange-400 focus:bg-white focus:ring-2 focus:ring-orange-100"
+                  className="h-9 w-40 sm:w-48 rounded-xl border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 outline-none transition focus:border-orange-400 focus:bg-white focus:ring-2 focus:ring-orange-100 cursor-pointer"
                 >
                   {departmentOptions.map((dept) => (
                     <option key={dept} value={dept}>
@@ -170,7 +175,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
               <div className="flex items-center gap-2">
                 <label
                   htmlFor="career-loc"
-                  className="text-xs font-medium text-slate-600"
+                  className="text-xs font-medium text-slate-600 shrink-0"
                 >
                   Location:
                 </label>
@@ -178,7 +183,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
                   id="career-loc"
                   value={selectedLocation}
                   onChange={(e) => handleLocationChange(e.target.value)}
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 outline-none transition focus:border-orange-400 focus:bg-white focus:ring-2 focus:ring-orange-100"
+                  className="h-9 w-40 sm:w-48 rounded-xl border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 outline-none transition focus:border-orange-400 focus:bg-white focus:ring-2 focus:ring-orange-100 cursor-pointer"
                 >
                   {locationOptions.map((loc) => (
                     <option key={loc} value={loc}>
@@ -205,8 +210,9 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
                   No matching jobs found
                 </h3>
                 <p className="mt-1 max-w-sm text-sm text-slate-500">
-                  We couldn't find any job openings matching your selected filters. Try
-                  resetting the filters or submit a general application on the right!
+                  We couldn&apos;t find any job openings matching your selected
+                  filters. Try resetting the filters or submit a general
+                  application on the right!
                 </p>
                 <button
                   onClick={() => {
@@ -240,8 +246,8 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
               </div>
 
               <p className="mt-3 text-xs leading-relaxed text-slate-600">
-                Prefer WhatsApp? Send your resume and contact details directly to our HR
-                helpline.
+                Prefer WhatsApp? Send your resume and contact details directly
+                to our HR helpline.
               </p>
 
               <a
@@ -265,7 +271,7 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
                   General Application
                 </h3>
                 <p className="mt-0.5 text-xs text-slate-500">
-                  Don't see your specific role? Send us your resume anyway!
+                  Don&apos;t see your specific role? Send us your resume anyway!
                 </p>
               </div>
               <GeneralApplicationForm />
@@ -279,7 +285,9 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
               </h4>
               <div className="space-y-2 text-xs">
                 <div className="flex items-center justify-between rounded-lg bg-slate-50 p-2.5">
-                  <span className="font-medium text-slate-600">HR Department:</span>
+                  <span className="font-medium text-slate-600">
+                    HR Department:
+                  </span>
                   <a
                     href="mailto:hr@tirupatisales.com"
                     className="font-bold text-orange-600 hover:underline"
@@ -288,7 +296,9 @@ export function CareerClientView({ initialJobs }: CareerClientViewProps) {
                   </a>
                 </div>
                 <div className="flex items-center justify-between rounded-lg bg-slate-50 p-2.5">
-                  <span className="font-medium text-slate-600">Sales Careers:</span>
+                  <span className="font-medium text-slate-600">
+                    Sales Careers:
+                  </span>
                   <a
                     href="mailto:sales@tirupatisales.com"
                     className="font-bold text-orange-600 hover:underline"

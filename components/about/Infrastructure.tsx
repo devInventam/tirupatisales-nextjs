@@ -40,15 +40,12 @@ export function Infrastructure({ items }: InfrastructureProps) {
     <section className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center mb-16">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-4 py-1 text-xs font-bold uppercase tracking-wider text-orange-800">
-            Scale & Capability
-          </span>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            State-of-the-Art Infrastructure
+            Our Infrastructure
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Built to fulfill large-scale industrial projects with precision, rapid delivery,
-            and complete quality assurance.
+            Built to fulfill large-scale industrial projects with precision,
+            rapid delivery, and complete quality assurance.
           </p>
         </div>
 

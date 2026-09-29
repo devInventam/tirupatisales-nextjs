@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import BlogCard from "./BlogCard";
+import FeaturedBlogCard from "./FeaturedBlogCard";
 import { Blog } from "@/types";
 
 interface BlogListClientProps {
@@ -30,6 +31,20 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
       return matchTab && matchCat;
     });
   }, [initialPosts, activeTab, selectedCategory]);
+
+  const featuredPost = useMemo(() => {
+    return filteredPosts.find(
+      (p) => p.featured === true || String(p.featured) === "true" || (p.featured as any) === 1
+    );
+  }, [filteredPosts]);
+
+  const remainingPosts = useMemo(() => {
+    if (!featuredPost) return filteredPosts;
+    const featuredId = featuredPost.documentId || featuredPost.slug || String(featuredPost.id);
+    return filteredPosts.filter(
+      (p) => (p.documentId || p.slug || String(p.id)) !== featuredId
+    );
+  }, [filteredPosts, featuredPost]);
 
   return (
     <div className="space-y-8">
@@ -71,18 +86,21 @@ export default function BlogListClient({ initialPosts }: BlogListClientProps) {
         )}
       </div>
 
+      {/* Featured Blog Highlight (Top Banner) */}
+      {featuredPost && <FeaturedBlogCard post={featuredPost} />}
+
       {/* Grid */}
       {filteredPosts.length === 0 ? (
         <div className="py-20 text-center text-gray-500 bg-white rounded-3xl border border-dashed border-gray-200">
           <p className="text-base font-semibold">No articles found in this category.</p>
         </div>
-      ) : (
+      ) : remainingPosts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPosts.map((post) => (
+          {remainingPosts.map((post) => (
             <BlogCard key={post.slug || post.id} post={post} />
           ))}
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

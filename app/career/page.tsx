@@ -108,26 +108,23 @@ export default async function CareerPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-400 backdrop-blur-sm">
-              <Briefcase className="h-3.5 w-3.5" />
-              Build Your Career With Us
-            </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Join Our Growing Team!
             </h1>
             <p className="mt-4 text-base text-slate-300 sm:text-lg">
-              Empowering industries across India with premium electrical solutions. We
-              offer exciting career opportunities, hands-on growth, and a dynamic culture.
+              Empowering industries across India with premium electrical
+              solutions. We offer exciting career opportunities, hands-on
+              growth, and a dynamic culture.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-xs font-medium text-slate-300">
               <div className="flex items-center gap-1.5">
                 <Building className="h-4 w-4 text-orange-400" />
                 <span>Head Office: Surat, Gujarat</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              {/* <div className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4 text-orange-400" />
                 <span>Branches in Ahmedabad, Vadodara, Delhi & more</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

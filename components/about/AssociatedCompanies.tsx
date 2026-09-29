@@ -2,7 +2,14 @@ import React from "react";
 import { GroupCompany } from "@/types";
 import { getStrapiMediaUrl } from "@/lib/media";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Globe, ExternalLink, Building } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Globe,
+  ExternalLink,
+  Building,
+} from "lucide-react";
 
 interface AssociatedCompaniesProps {
   companies: GroupCompany[];
@@ -15,7 +22,8 @@ const FALLBACK_COMPANIES: GroupCompany[] = [
     documentId: "1",
     name: "Tirupati Switchgear & Controls",
     category: "Switchgear & Panel Fabrication",
-    address: "Plot 52-53, Soma Kanji ni Wadi, Khatodra Wadi, Surat - 395002, Gujarat",
+    address:
+      "Plot 52-53, Soma Kanji ni Wadi, Khatodra Wadi, Surat - 395002, Gujarat",
     phone: ["+91 92279 15114"],
     email: ["sales@tirupatisales.com"],
     website: "https://www.tirupatisales.com",
@@ -39,7 +47,8 @@ const FALLBACK_COMPANIES: GroupCompany[] = [
     documentId: "3",
     name: "Tirupati Electrical Projects NCR",
     category: "North India Industrial Distribution",
-    address: "Plot 76-D, Phase IV, Udyog Vihar, Sector 18, Gurugram - 122001, Haryana",
+    address:
+      "Plot 76-D, Phase IV, Udyog Vihar, Sector 18, Gurugram - 122001, Haryana",
     phone: ["+91 95127 40077"],
     email: ["northsales@tirupatisales.com"],
     website: "https://www.tirupatisales.com",
@@ -52,29 +61,29 @@ export function AssociatedCompanies({
   companies,
   showHeader = true,
 }: AssociatedCompaniesProps) {
-  const displayCompanies = companies.length > 0 ? companies : FALLBACK_COMPANIES;
+  const displayCompanies =
+    companies.length > 0 ? companies : FALLBACK_COMPANIES;
 
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {showHeader && (
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-4 py-1 text-xs font-bold uppercase tracking-wider text-orange-800">
-              Our Network
-            </span>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
               Associated & Group Companies
             </h2>
             <p className="mt-3 text-base text-slate-600">
-              A diversified network of engineering and distribution companies serving
-              specialized industrial electrical requirements.
+              A diversified network of engineering and distribution companies
+              serving specialized industrial electrical requirements.
             </p>
           </div>
         )}
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {displayCompanies.map((company) => {
-            const imageUrl = company.image ? getStrapiMediaUrl(company.image) : null;
+            const imageUrl = company.image
+              ? getStrapiMediaUrl(company.image)
+              : null;
             return (
               <div
                 key={company.id}
@@ -122,7 +131,9 @@ export function AssociatedCompanies({
                       {company.address && (
                         <div className="flex items-start gap-2">
                           <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-orange-500" />
-                          <span className="leading-relaxed">{company.address}</span>
+                          <span className="leading-relaxed">
+                            {company.address}
+                          </span>
                         </div>
                       )}
 
@@ -178,9 +189,9 @@ export function AssociatedCompanies({
                   </div>
                 </div>
 
-                <div className="border-t border-slate-100 bg-slate-50/60 px-6 py-3 text-[11px] font-medium text-slate-500">
+                {/* <div className="border-t border-slate-100 bg-slate-50/60 px-6 py-3 text-[11px] font-medium text-slate-500">
                   Authorized Part of Tirupati Group Network
-                </div>
+                </div> */}
               </div>
             );
           })}

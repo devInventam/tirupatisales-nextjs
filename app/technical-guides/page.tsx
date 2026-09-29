@@ -60,16 +60,13 @@ export default async function TechnicalGuidesPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-400 backdrop-blur-sm">
-              <FileCode className="h-3.5 w-3.5" />
-              Engineering Resources
-            </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Technical Guides & Parameters
+              Technical Guides
             </h1>
             <p className="mt-4 text-base text-slate-300 sm:text-lg">
-              Access verified engineering data, cable derating formulas, lighting lux
-              parameters, and switchgear dimension catalogs directly from our technical team.
+              Access verified engineering data, cable derating formulas,
+              parameters, and switchgear dimension catalogs directly from our
+              technical team.
             </p>
           </div>
         </div>

@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, MapPin, Briefcase, Clock, Send, MessageCircle } from "lucide-react";
+import {
+  ChevronDown,
+  MapPin,
+  Briefcase,
+  Clock,
+  Send,
+  MessageCircle,
+} from "lucide-react";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import { Job } from "@/types";
 
@@ -14,7 +21,7 @@ export function JobCard({ job, onApply }: JobCardProps) {
   const [expanded, setExpanded] = useState(false);
 
   const whatsappUrl = `https://wa.me/919512740405?text=${encodeURIComponent(
-    `Hi, I visited Tirupati Sales website and I want to apply for the ${job.title} position.`
+    `Hi, I visited Tirupati Sales website and I want to apply for the ${job.title} position.`,
   )}`;
 
   return (
@@ -26,7 +33,8 @@ export function JobCard({ job, onApply }: JobCardProps) {
             <Briefcase className="w-3 h-3" /> {job.department}
           </span>
           <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-gray-600 bg-gray-100">
-            <MapPin className="w-3 h-3 text-gray-400" /> {job.location || "Gujarat"}
+            <MapPin className="w-3 h-3 text-gray-400" />{" "}
+            {job.location || "Gujarat"}
           </span>
           <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold text-blue-600 bg-blue-50">
             <Clock className="w-3 h-3" /> {job.type}
@@ -49,7 +57,11 @@ export function JobCard({ job, onApply }: JobCardProps) {
               onClick={() => setExpanded(!expanded)}
               className="flex items-center justify-between w-full text-xs font-semibold text-red-600 hover:text-red-700 cursor-pointer"
             >
-              <span>{expanded ? "Hide Details & Requirements" : "View Requirements & Role"}</span>
+              <span>
+                {expanded
+                  ? "Hide Details & Requirements"
+                  : "View Requirements & Role"}
+              </span>
               <ChevronDown
                 className={`w-4 h-4 transition-transform duration-200 ${
                   expanded ? "rotate-180" : ""
@@ -61,13 +73,17 @@ export function JobCard({ job, onApply }: JobCardProps) {
               <div className="mt-3 text-xs text-gray-700 space-y-3 animate-in fade-in-0 duration-150">
                 {job.description && (
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Role Overview:</h4>
+                    <h4 className="font-bold text-gray-900 mb-1">
+                      Role Overview:
+                    </h4>
                     <MarkdownRenderer content={job.description} />
                   </div>
                 )}
                 {job.requirements && (
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Requirements:</h4>
+                    <h4 className="font-bold text-gray-900 mb-1">
+                      Requirements:
+                    </h4>
                     <MarkdownRenderer content={job.requirements} />
                   </div>
                 )}
@@ -78,7 +94,7 @@ export function JobCard({ job, onApply }: JobCardProps) {
       </div>
 
       {/* Buttons */}
-      <div className="mt-6 pt-4 border-t border-gray-100 grid grid-cols-2 gap-2">
+      <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2">
         <button
           type="button"
           onClick={() => onApply(job)}
@@ -87,16 +103,6 @@ export function JobCard({ job, onApply }: JobCardProps) {
           <Send className="w-3.5 h-3.5" />
           <span>Apply Now</span>
         </button>
-
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
-        >
-          <MessageCircle className="w-3.5 h-3.5" />
-          <span>WhatsApp</span>
-        </a>
       </div>
     </div>
   );

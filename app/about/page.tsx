@@ -27,12 +27,14 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  const [companyInfo, values, infrastructure, groupCompanies] = await Promise.all([
-    companyService.getCompanyInfo(),
-    companyService.getCompanyValues(),
-    companyService.getInfrastructureItems(),
-    technicalGuideService.getGroupCompanies(),
-  ]);
+  const [companyInfo, values, infrastructure, groupCompanies] =
+    await Promise.all([
+      companyService.getCompanyInfo(),
+      companyService.getCompanyValues(),
+      companyService.getInfrastructureItems(),
+      technicalGuideService.getGroupCompanies(),
+    ]);
+  console.log("🚀 ~ AboutPage ~ companyInfo:", companyInfo);
 
   return (
     <main className="min-h-screen">
@@ -41,27 +43,22 @@ export default async function AboutPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-orange-400 backdrop-blur-sm">
-              <Sparkles className="h-3.5 w-3.5" />
-              Established 1993
-            </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Powering India&apos;s Industrial Progress
+              About Us
             </h1>
             <p className="mt-4 text-base text-slate-300 sm:text-lg">
-              For over {companyInfo.yearsExperience || 30} years, Tirupati Sales Corporation
-              has stood at the forefront of industrial electrical trading, authorized switchgear
-              distribution, and integrated project engineering.
+              Powering progress for {companyInfo.yearsExperience || 30}+ years
+              with trusted electrical solutions across India.
             </p>
           </div>
         </div>
       </section>
 
       {/* Corporate Story & Mission Intro */}
-      <section className="bg-white py-16 sm:py-20">
+      {/* <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center"> */}
+      {/* <div className="lg:col-span-6 space-y-6">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-orange-800">
                 Our Heritage
               </span>
@@ -69,16 +66,19 @@ export default async function AboutPage() {
                 A Legacy of Trust, Technical Depth, & Speedy Delivery
               </h2>
               <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
-                Founded with a vision to streamline industrial procurement, Tirupati Sales
-                Corporation has grown from a local supplier into one of Western India’s
-                largest stocking distributors of low-voltage and medium-voltage switchgear,
-                cables, industrial lighting, and customized control panels.
+                Founded with a vision to streamline industrial procurement,
+                Tirupati Sales Corporation has grown from a local supplier into
+                one of Western India’s largest stocking distributors of
+                low-voltage and medium-voltage switchgear, cables, industrial
+                lighting, and customized control panels.
               </p>
               <p className="text-sm leading-relaxed text-slate-600 sm:text-base">
-                Operating with a 1,00,000 sq. ft. central logistics center in Hazira, Surat,
-                we maintain high inventory volumes across world-renowned brands like Schneider
-                Electric, L&T, Siemens, Polycab, Legrand, and Philips to guarantee prompt,
-                accurate execution for EPC contractors, panel builders, OEMs, and industrial plants.
+                Operating with a 1,00,000 sq. ft. central logistics center in
+                Hazira, Surat, we maintain high inventory volumes across
+                world-renowned brands like Schneider Electric, L&T, Siemens,
+                Polycab, Legrand, and Philips to guarantee prompt, accurate
+                execution for EPC contractors, panel builders, OEMs, and
+                industrial plants.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-4">
@@ -99,10 +99,10 @@ export default async function AboutPage() {
                   <span>Pan-India Logistics</span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            {/* Visual Stat Cards */}
-            <div className="lg:col-span-6 grid grid-cols-2 gap-4">
+      {/* Visual Stat Cards */}
+      {/* <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="rounded-3xl border border-slate-100 bg-gradient-to-br from-orange-50 to-amber-50/50 p-6 sm:p-8">
                 <Building2 className="h-8 w-8 text-orange-600" />
                 <div className="mt-4 text-3xl font-black text-slate-900 sm:text-4xl">
@@ -112,7 +112,8 @@ export default async function AboutPage() {
                   Years of Leadership
                 </div>
                 <p className="mt-2 text-xs text-slate-600">
-                  Serving India’s key infrastructure and industrial hubs since 1993.
+                  Serving India’s key infrastructure and industrial hubs since
+                  1993.
                 </p>
               </div>
 
@@ -138,7 +139,8 @@ export default async function AboutPage() {
                   Expert Engineers & Staff
                 </div>
                 <p className="mt-2 text-xs text-slate-300">
-                  Dedicated technical engineers for design, quotation, and testing.
+                  Dedicated technical engineers for design, quotation, and
+                  testing.
                 </p>
               </div>
 
@@ -151,13 +153,14 @@ export default async function AboutPage() {
                   Sq. Ft. Central Hub
                 </div>
                 <p className="mt-2 text-xs text-slate-600">
-                  Hazira warehouse ready with heavy switchgear stock for prompt delivery.
+                  Hazira warehouse ready with heavy switchgear stock for prompt
+                  delivery.
                 </p>
               </div>
-            </div>
-          </div>
+            </div> */}
+      {/* </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Values */}
       <CompanyValues values={values} />
