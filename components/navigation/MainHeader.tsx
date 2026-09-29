@@ -104,6 +104,18 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const shellRef = useRef<HTMLDivElement>(null);
 
+  // lock body scroll on mobile menu
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   // focus when opened
   useEffect(() => {
     if (!searchOpen) return;
@@ -157,7 +169,7 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
   // Build indexes from API nav data
   const parentsIndex = useMemo(
     () => navData.map((p) => ({ id: p.id, name: p.name })),
-    [navData]
+    [navData],
   );
 
   const categoriesIndex = useMemo(
@@ -168,9 +180,9 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
           parentName: p.name,
           id: c.id,
           name: c.name,
-        }))
+        })),
       ),
-    [navData]
+    [navData],
   );
 
   // filter parents/categories by query
@@ -207,7 +219,7 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
   const productHref = (
     parentId: string,
     categoryId: string,
-    productName: string
+    productName: string,
   ) => `/category/${parentId}/${categoryId}?${encodeURIComponent(productName)}`;
 
   const homeItem = navigation.find((item) => item.name === "Home");
@@ -223,19 +235,31 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
         <div className="flex animate-marquee-smooth whitespace-nowrap text-lg font-bold text-gray-800">
           <span className="mx-16">
             Welcome to {companyInfo.companyName}{" "}
-            <span className="font-black">Since {companyInfo.yearEstablished}</span>
+            <span className="font-black">
+              Since {companyInfo.yearEstablished}
+            </span>
             !!!! {companyInfo.marqueeText} with{" "}
-            <span className="font-black">annual turnover {companyInfo.annualTurnover * 10} million</span>
-            {" "}&{" "}
-            <span className="font-black">{companyInfo.employeeCount}+ manpower</span>
+            <span className="font-black">
+              annual turnover {companyInfo.annualTurnover * 10} million
+            </span>{" "}
+            &{" "}
+            <span className="font-black">
+              {companyInfo.employeeCount}+ manpower
+            </span>
           </span>
           <span className="mx-16">
             Welcome to {companyInfo.companyName}{" "}
-            <span className="font-black">Since {companyInfo.yearEstablished}</span>
+            <span className="font-black">
+              Since {companyInfo.yearEstablished}
+            </span>
             !!!! {companyInfo.marqueeText} with{" "}
-            <span className="font-black">annual turnover {companyInfo.annualTurnover * 10} million</span>
-            {" "}&{" "}
-            <span className="font-black">{companyInfo.employeeCount}+ manpower</span>
+            <span className="font-black">
+              annual turnover {companyInfo.annualTurnover * 10} million
+            </span>{" "}
+            &{" "}
+            <span className="font-black">
+              {companyInfo.employeeCount}+ manpower
+            </span>
           </span>
         </div>
       </div>
@@ -258,26 +282,24 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
           </div>
 
           {/* Mobile menu + search */}
-          <div className="flex lg:hidden">
-            <div className="flex items-center gap-x-6">
-              <button
-                type="button"
-                onClick={() => setSearchOpen((v) => !v)}
-                className="font-semibold text-white hover:text-black hover:bg-gray-50 rounded-md p-1"
-                aria-label="Search"
-              >
-                <MagnifyingGlassIcon className="inline-block mr-1 size-5" />
-              </button>
+          <div className="flex lg:hidden items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setSearchOpen((v) => !v)}
+              className="p-2 text-white hover:text-white hover:bg-white/10 active:bg-white/20 rounded-lg transition-colors cursor-pointer"
+              aria-label="Search"
+            >
+              <MagnifyingGlassIcon className="size-5" />
+            </button>
 
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(true)}
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-                aria-label="Open main menu"
-              >
-                <Bars3Icon aria-hidden="true" className="size-6" />
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="p-2 text-white hover:text-white hover:bg-white/10 active:bg-white/20 rounded-lg transition-colors cursor-pointer"
+              aria-label="Open main menu"
+            >
+              <Bars3Icon aria-hidden="true" className="size-6" />
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -313,309 +335,327 @@ export default function MainHeader({ companyInfo, navData }: MainHeaderProps) {
             </button>
           </div>
         </nav>
+      </header>
 
-        {/* Search panel */}
-        {searchOpen && (
-          <div className="fixed inset-0 z-[60] flex items-start justify-center bg-black/30 backdrop-blur-sm transition-all duration-300">
-            <div
-              ref={shellRef}
-              className="
-              mt-12
-        w-full max-w-[92%] sm:max-w-[750px]
-        rounded-2xl bg-white
-        ring-1 ring-black/5
-        shadow-[0_8px_30px_rgba(0,0,0,0.12)]
-        transition-transform duration-300 scale-100
-      "
+      {/* Search panel */}
+      {searchOpen && (
+        <div className="fixed inset-0 z-[60] flex items-start justify-center bg-black/50 backdrop-blur-sm transition-all duration-300">
+          <div
+            ref={shellRef}
+            className="
+              mt-16
+              w-full max-w-[92%] sm:max-w-[750px]
+              rounded-2xl bg-white
+              ring-1 ring-black/5
+              shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+              transition-transform duration-300 scale-100
+            "
+          >
+            {/* input row */}
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3"
             >
-              {/* input row */}
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3"
-              >
-                <MagnifyingGlassIcon className="h-5 w-5 text-gray-600 shrink-0" />
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search products, categories, parents…"
-                  className="
-            flex-1 border-0 bg-transparent focus:ring-0
-            text-sm sm:text-base text-gray-900 placeholder:text-gray-500 outline-none
-          "
-                />
-                {query && (
-                  <button
-                    type="button"
-                    onClick={() => setQuery("")}
-                    className="rounded-md p-1 hover:bg-black/5"
-                    aria-label="Clear"
-                  >
-                    <XMarkIcon className="h-5 w-5 text-gray-600" />
-                  </button>
-                )}
-              </form>
+              <MagnifyingGlassIcon className="h-5 w-5 text-gray-600 shrink-0" />
+              <input
+                ref={inputRef}
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search products, categories, parents…"
+                className="
+                  flex-1 border-0 bg-transparent focus:ring-0
+                  text-sm sm:text-base text-gray-900 placeholder:text-gray-500 outline-none
+                "
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="rounded-md p-1 hover:bg-black/5"
+                  aria-label="Clear"
+                >
+                  <XMarkIcon className="h-5 w-5 text-gray-600" />
+                </button>
+              )}
+            </form>
 
-              {/* results */}
-              <div
-                className="px-3 sm:px-4 pb-3 sm:pb-4 grid gap-3 sm:gap-4 
+            {/* results */}
+            <div
+              className="px-3 sm:px-4 pb-3 sm:pb-4 grid gap-3 sm:gap-4 
              max-h-[60vh] sm:max-h-[70vh] overflow-y-auto custom-scrollbar"
-              >
-                {query ? (
-                  <>
-                    {/* Parents */}
-                    {filtered.parents.length > 0 && (
-                      <div>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {filtered.parents.map((p) => (
-                            <li key={p.id}>
-                              <Link
-                                href={parentHref(p.id)}
-                                onClick={() => {
-                                  pushRecent(query);
-                                  setSearchOpen(false);
-                                }}
-                                title={p.name}
-                                className={[
-                                  "relative block w-full overflow-hidden",
-                                  "bg-white/70 px-3 py-2 text-sm ring-1 ring-black/5 hover:bg-[#dcddde] transition",
-                                  "after:pointer-events-none after:content-['']",
-                                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full",
-                                  "after:origin-left after:scale-x-0 hover:after:scale-x-100",
-                                  "after:bg-gradient-to-r after:from-orange-500 after:to-red-500",
-                                  "after:transition-transform after:duration-300",
-                                ].join(" ")}
-                              >
-                                <span className="block truncate">{p.name}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {/* Categories */}
-                    {filtered.categories.length > 0 && (
-                      <div>
-                        <div className="px-1 pb-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600">
-                          Categories
-                        </div>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {filtered.categories.map((c) => (
-                            <li key={`${c.parentId}:${c.id}`}>
-                              <Link
-                                href={categoryHref(c.parentId, c.id)}
-                                onClick={() => {
-                                  pushRecent(query);
-                                  setSearchOpen(false);
-                                }}
-                                title={`${c.name} — ${c.parentName}`}
-                                className={[
-                                  "relative block w-full overflow-hidden",
-                                  " bg-white px-3 py-2 text-sm ring-1 ring-black/5 hover:bg-[#dcddde] transition",
-                                  "after:pointer-events-none after:content-['']",
-                                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full",
-                                  "after:origin-left after:scale-x-0 hover:after:scale-x-100",
-                                  "after:bg-gradient-to-r after:from-orange-500 after:to-red-500",
-                                  "after:transition-transform after:duration-300",
-                                ].join(" ")}
-                              >
-                                <span className="block truncate">{c.name}</span>
-                                <span className="block text-[11px] text-gray-500 truncate">
-                                  {c.parentName}
-                                </span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {/* Products */}
-                    {activeSearchProducts.length > 0 && (
-                      <div>
-                        <div className="px-1 pb-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600">
-                          Products
-                        </div>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {activeSearchProducts.map((pr) => (
-                            <li key={pr.id} className="flex">
-                              <Link
-                                href={productHref(
-                                  pr.parentSlug,
-                                  pr.subcategorySlug,
-                                  pr.name
-                                )}
-                                onClick={() => {
-                                  pushRecent(query);
-                                  setSearchOpen(false);
-                                }}
-                                title={`${pr.name} - ${pr.brand || ""} ${
-                                  pr.subcategoryName || ""
-                                }`.trim()}
-                                className={[
-                                  "relative flex items-center gap-3 flex-1 overflow-hidden",
-                                  "bg-white px-3 py-2 text-sm ring-1 ring-black/5 hover:bg-[#dcddde] transition",
-                                  "after:pointer-events-none after:content-['']",
-                                  "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full",
-                                  "after:origin-left after:scale-x-0 hover:after:scale-x-100",
-                                  "after:bg-gradient-to-r after:from-orange-500 after:to-red-500",
-                                  "after:transition-transform after:duration-300",
-                                ].join(" ")}
-                              >
-                                {pr.image ? (
-                                  <img
-                                    src={pr.image}
-                                    alt={pr.name}
-                                    className="h-8 w-8 object-contain bg-white shrink-0"
-                                  />
-                                ) : (
-                                  <div className="h-8 w-8 border-[1px] bg-white shrink-0" />
-                                )}
-                                <div className="min-w-0">
-                                  <div className="truncate">{pr.name}</div>
-                                  <div className="text-[11px] text-gray-500 truncate">
-                                    {[pr.brand, pr.subcategoryName]
-                                      .filter(Boolean)
-                                      .join(" · ")}
-                                  </div>
-                                </div>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {filtered.parents.length === 0 &&
-                      filtered.categories.length === 0 &&
-                      activeSearchProducts.length === 0 && (
-                        <div className="px-1 py-2 text-sm text-gray-600">
-                          No matches
-                        </div>
-                      )}
-                  </>
-                ) : (
-                  // Idle: recent chips
-                  <div className="grid gap-3">
-                    {!!recent.length && (
-                      <div>
-                        <div className="px-1 pb-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600">
-                          Recent
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                          {recent.map((r) => (
-                            <button
-                              key={r}
-                              type="button"
-                              title={r}
+            >
+              {query ? (
+                <>
+                  {/* Parents */}
+                  {filtered.parents.length > 0 && (
+                    <div>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {filtered.parents.map((p) => (
+                          <li key={p.id}>
+                            <Link
+                              href={parentHref(p.id)}
                               onClick={() => {
-                                setQuery(r);
+                                pushRecent(query);
+                                setSearchOpen(false);
                               }}
-                              className="max-w-[48%] sm:max-w-none truncate rounded-full bg-white/70 px-3 py-1.5 text-xs ring-1 ring-black/5 hover:bg-[#dcddde] transition"
+                              title={p.name}
+                              className={[
+                                "relative block w-full overflow-hidden",
+                                "bg-white/70 px-3 py-2 text-sm ring-1 ring-black/5 hover:bg-[#dcddde] transition",
+                                "after:pointer-events-none after:content-['']",
+                                "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full",
+                                "after:origin-left after:scale-x-0 hover:after:scale-x-100",
+                                "after:bg-gradient-to-r after:from-orange-500 after:to-red-500",
+                                "after:transition-transform after:duration-300",
+                              ].join(" ")}
                             >
-                              <span className="truncate">{r}</span>
-                            </button>
-                          ))}
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setRecent([]);
-                              localStorage.removeItem("tsc_recent_searches");
-                            }}
-                            className="text-xs text-gray-600 underline/30 hover:underline"
-                          >
-                            Clear
-                          </button>
-                        </div>
+                              <span className="block truncate">{p.name}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Categories */}
+                  {filtered.categories.length > 0 && (
+                    <div>
+                      <div className="px-1 pb-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600">
+                        Categories
+                      </div>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {filtered.categories.map((c) => (
+                          <li key={`${c.parentId}:${c.id}`}>
+                            <Link
+                              href={categoryHref(c.parentId, c.id)}
+                              onClick={() => {
+                                pushRecent(query);
+                                setSearchOpen(false);
+                              }}
+                              title={`${c.name} — ${c.parentName}`}
+                              className={[
+                                "relative block w-full overflow-hidden",
+                                " bg-white px-3 py-2 text-sm ring-1 ring-black/5 hover:bg-[#dcddde] transition",
+                                "after:pointer-events-none after:content-['']",
+                                "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full",
+                                "after:origin-left after:scale-x-0 hover:after:scale-x-100",
+                                "after:bg-gradient-to-r after:from-orange-500 after:to-red-500",
+                                "after:transition-transform after:duration-300",
+                              ].join(" ")}
+                            >
+                              <span className="block truncate">{c.name}</span>
+                              <span className="block text-[11px] text-gray-500 truncate">
+                                {c.parentName}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Products */}
+                  {activeSearchProducts.length > 0 && (
+                    <div>
+                      <div className="px-1 pb-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600">
+                        Products
+                      </div>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {activeSearchProducts.map((pr) => (
+                          <li key={pr.id} className="flex">
+                            <Link
+                              href={productHref(
+                                pr.parentSlug,
+                                pr.subcategorySlug,
+                                pr.name,
+                              )}
+                              onClick={() => {
+                                pushRecent(query);
+                                setSearchOpen(false);
+                              }}
+                              title={`${pr.name} - ${pr.brand || ""} ${
+                                pr.subcategoryName || ""
+                              }`.trim()}
+                              className={[
+                                "relative flex items-center gap-3 flex-1 overflow-hidden",
+                                "bg-white px-3 py-2 text-sm ring-1 ring-black/5 hover:bg-[#dcddde] transition",
+                                "after:pointer-events-none after:content-['']",
+                                "after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full",
+                                "after:origin-left after:scale-x-0 hover:after:scale-x-100",
+                                "after:bg-gradient-to-r after:from-orange-500 after:to-red-500",
+                                "after:transition-transform after:duration-300",
+                              ].join(" ")}
+                            >
+                              {pr.image ? (
+                                <img
+                                  src={pr.image}
+                                  alt={pr.name}
+                                  className="h-8 w-8 object-contain bg-white shrink-0"
+                                />
+                              ) : (
+                                <div className="h-8 w-8 border-[1px] bg-white shrink-0" />
+                              )}
+                              <div className="min-w-0">
+                                <div className="truncate">{pr.name}</div>
+                                <div className="text-[11px] text-gray-500 truncate">
+                                  {[pr.brand, pr.subcategoryName]
+                                    .filter(Boolean)
+                                    .join(" · ")}
+                                </div>
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {filtered.parents.length === 0 &&
+                    filtered.categories.length === 0 &&
+                    activeSearchProducts.length === 0 && (
+                      <div className="px-1 py-2 text-sm text-gray-600">
+                        No matches
                       </div>
                     )}
-                  </div>
-                )}
-              </div>
+                </>
+              ) : (
+                // Idle: recent chips
+                <div className="grid gap-3">
+                  {!!recent.length && (
+                    <div>
+                      <div className="px-1 pb-1 text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-600">
+                        Recent
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {recent.map((r) => (
+                          <button
+                            key={r}
+                            type="button"
+                            title={r}
+                            onClick={() => {
+                              setQuery(r);
+                            }}
+                            className="max-w-[48%] sm:max-w-none truncate rounded-full bg-white/70 px-3 py-1.5 text-xs ring-1 ring-black/5 hover:bg-[#dcddde] transition"
+                          >
+                            <span className="truncate">{r}</span>
+                          </button>
+                        ))}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setRecent([]);
+                            localStorage.removeItem("tsc_recent_searches");
+                          }}
+                          className="text-xs text-gray-600 underline/30 hover:underline"
+                        >
+                          Clear
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="fixed inset-0 z-50 lg:hidden">
-            <div
-              className="fixed inset-0 bg-black/30"
-              onClick={() => setMobileMenuOpen(false)}
-            />
-            <div className="fixed inset-y-0 right-0 z-50 w-full p-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div className="flex items-center justify-between lg:p-8">
+      {/* Mobile Sidebar Drawer - OUTSIDE header so it spans full viewport */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[100] lg:hidden">
+          {/* Dimmed Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/75 backdrop-blur-xs transition-opacity animate-in fade-in duration-200"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          {/* Right Sidebar Drawer */}
+          <div
+            className="fixed inset-y-0 right-0 z-50 w-[85vw] xs:w-[320px] sm:w-[360px] max-w-[380px] h-full bg-gradient-to-b from-gray-950 via-gray-900 to-black text-white border-l border-white/10 shadow-2xl flex flex-col justify-between overflow-hidden animate-in slide-in-from-right duration-300"
+          >
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-black/40 shrink-0">
+              <Link
+                href="/"
+                className="flex items-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Tirupati Sales</span>
+                <img
+                  alt="Tirupati Sales Logo"
+                  src="/assets/company_logo/header-logo-removed-bg.webp"
+                  className="h-9 w-auto max-w-[180px] object-contain"
+                />
+              </Link>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setSearchOpen(true);
+                  }}
+                  className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                  aria-label="Search"
+                >
+                  <MagnifyingGlassIcon className="size-5" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                  aria-label="Close menu"
+                >
+                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon aria-hidden="true" className="size-6" />
+                </button>
+              </div>
+            </div>
+
+            {/* Scrollable Navigation List */}
+            <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1.5 custom-scrollbar">
+              {homeItem && (
                 <Link
-                  href="/"
-                  className="-m-1.5 p-1.5"
+                  href={homeItem.href}
+                  className="flex items-center px-3 py-2.5 rounded-lg text-base font-semibold text-gray-200 hover:text-white hover:bg-white/10 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className="sr-only">Tirupati Sales</span>
-                  <img
-                    alt="Tirupati Sales Logo"
-                    src="/assets/company_logo/header-logo-removed-bg.webp"
-                    className="h-10 w-auto max-w-[220px]"
-                  />
+                  {homeItem.name}
                 </Link>
-                <div className="flex items-center gap-x-6">
-                  <button
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      setSearchOpen((v) => !v);
-                    }}
-                    className="font-semibold text-gray-700"
-                    aria-label="Search"
-                  >
-                    <MagnifyingGlassIcon className="inline-block mr-1 size-5" />
-                  </button>
+              )}
 
-                  <button
-                    type="button"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                    aria-label="Close menu"
-                  >
-                    <span className="sr-only">Close menu</span>
-                    <XMarkIcon aria-hidden="true" className="size-6" />
-                  </button>
-                </div>
-              </div>
+              {/* Expandable Products Hierarchy */}
+              <CategoryListDropdown
+                setMobileMenuOpen={setMobileMenuOpen}
+                navData={navData}
+              />
 
-              <div className="mt-6 flow-root">
-                <div className="-my-6 divide-y divide-gray-500/10">
-                  <div className="space-y-2 py-6">
-                    {homeItem && (
-                      <Link
-                        href={homeItem.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-700 hover:text-black hover:bg-gray-50 hover:border hover:border-[#E03131]"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {homeItem.name}
-                      </Link>
-                    )}
-                    <CategoryListDropdown
-                      setMobileMenuOpen={setMobileMenuOpen}
-                      navData={navData}
-                    />
-                    {remainingNavItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-700 hover:text-black hover:bg-gray-50 hover:border hover:border-[#E03131]"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              {remainingNavItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="flex items-center px-3 py-2.5 rounded-lg text-base font-semibold text-gray-200 hover:text-white hover:bg-white/10 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Drawer Footer CTA */}
+            <div className="p-4 border-t border-white/10 bg-black/50 space-y-3 shrink-0">
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center rounded-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-red-950/40 transition-all active:scale-[0.98]"
+              >
+                Inquire Now / Contact Us
+              </Link>
             </div>
           </div>
-        )}
-      </header>
+        </div>
+      )}
     </div>
   );
 }

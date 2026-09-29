@@ -47,7 +47,7 @@ export default function CatalogSidebar({
   }, [navData, isSearching, search]);
 
   return (
-    <aside className="w-full lg:w-72 shrink-0 bg-white border-r border-gray-100 p-4 flex flex-col gap-4">
+    <aside className="hidden lg:flex lg:w-72 shrink-0 bg-white border-r border-gray-100 p-4 flex-col gap-4">
       {/* Search Filter Box */}
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -62,7 +62,7 @@ export default function CatalogSidebar({
           <button
             type="button"
             onClick={() => setSearch("")}
-            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer"
           >
             <X className="w-3.5 h-3.5" />
           </button>

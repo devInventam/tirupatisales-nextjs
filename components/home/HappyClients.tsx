@@ -29,12 +29,12 @@ export default function HappyClients({
   if (clientsWithLogos.length === 0) return null;
 
   return (
-    <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/60 border-t border-gray-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto mb-10 text-center">
-        <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+    <section className="w-full py-10 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/60 border-t border-gray-100 overflow-hidden">
+      <div className="max-w-7xl mx-auto mb-8 sm:mb-10 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
           Our Happy Clients
         </h2>
-        <p className="text-sm text-gray-600 mt-2">
+        <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">
           Supplying premier builders, EPC contractors, infrastructure projects, and OEMs across India
         </p>
       </div>
@@ -50,15 +50,15 @@ export default function HappyClients({
               return (
                 <div
                   key={`client-${client.id || index}`}
-                  className="flex-[0_0_50%] sm:flex-[0_0_33.33%] md:flex-[0_0_25%] lg:flex-[0_0_16.66%] px-2.5"
+                  className="flex-[0_0_50%] sm:flex-[0_0_33.33%] md:flex-[0_0_25%] lg:flex-[0_0_16.66%] px-1.5 sm:px-2.5"
                 >
-                  <div className="flex items-center justify-center p-4 h-28 sm:h-32 rounded-2xl bg-white border border-gray-200/80 hover:border-red-300 shadow-xs hover:shadow-md transition-all duration-300 group">
+                  <div className="flex items-center justify-center p-3 sm:p-4 h-20 sm:h-28 md:h-32 rounded-xl sm:rounded-2xl bg-white border border-gray-200/80 hover:border-red-300 shadow-xs hover:shadow-md transition-all duration-300 group">
                     <div className="relative w-full h-full">
                       <Image
                         src={logoUrl}
                         alt={client.name || "Client Logo"}
                         fill
-                        className="object-contain hover:scale-105 transition-all duration-300"
+                        className="object-contain group-hover:scale-105 transition-all duration-300"
                         unoptimized
                       />
                     </div>
