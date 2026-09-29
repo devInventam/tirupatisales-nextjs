@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "@/store/provider";
 import MainHeader from "@/components/navigation/MainHeader";
 import Footer from "@/components/layout/Footer";
 import { companyService, productService } from "@/services/api";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -89,7 +82,7 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"

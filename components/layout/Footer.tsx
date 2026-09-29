@@ -48,7 +48,9 @@ interface FooterProps {
 
 export default function Footer({ footerData }: FooterProps) {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [turnstileToken, setTurnstileToken] = useState("");
 
@@ -59,7 +61,10 @@ export default function Footer({ footerData }: FooterProps) {
     setStatus("loading");
     setErrorMsg("");
 
-    const result = await newsletterService.subscribe(email.trim(), turnstileToken);
+    const result = await newsletterService.subscribe(
+      email.trim(),
+      turnstileToken,
+    );
     if (result.success) {
       setStatus("success");
       setEmail("");
@@ -172,7 +177,9 @@ export default function Footer({ footerData }: FooterProps) {
             <div className="flex items-center gap-2.5 text-gray-300">
               <Phone className="w-4 h-4 text-[#F5C846] shrink-0" />
               <p>
-                <span className="text-gray-400">{footerData.landlineLabel}:</span>{" "}
+                <span className="text-gray-400">
+                  {footerData.landlineLabel}:
+                </span>{" "}
                 <a
                   href={`tel:${footerData.landline.replace(/\s+/g, "")}`}
                   className="hover:text-white"
@@ -224,7 +231,11 @@ export default function Footer({ footerData }: FooterProps) {
                 placeholder="Enter your business email"
                 className="w-full px-3.5 py-2.5 rounded-xl text-gray-900 bg-white placeholder:text-gray-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
               />
-              <Turnstile onToken={setTurnstileToken} theme="dark" className="mt-1" />
+              {/* <Turnstile
+                onToken={setTurnstileToken}
+                theme="dark"
+                className="mt-1"
+              /> */}
               {status === "error" && (
                 <div className="flex items-center gap-1.5 text-xs text-red-400">
                   <AlertCircle className="w-3.5 h-3.5 shrink-0" />

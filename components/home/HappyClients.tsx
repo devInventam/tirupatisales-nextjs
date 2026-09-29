@@ -31,9 +31,6 @@ export default function HappyClients({
   return (
     <section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gray-50/60 border-t border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto mb-10 text-center">
-        <span className="text-xs font-semibold tracking-wider text-red-600 uppercase bg-red-50 px-3 py-1 rounded-full border border-red-200 inline-block mb-2">
-          Trusted Relationships
-        </span>
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight">
           Our Happy Clients
         </h2>
@@ -61,7 +58,7 @@ export default function HappyClients({
                         src={logoUrl}
                         alt={client.name || "Client Logo"}
                         fill
-                        className="object-contain grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
+                        className="object-contain hover:scale-105 transition-all duration-300"
                         unoptimized
                       />
                     </div>
