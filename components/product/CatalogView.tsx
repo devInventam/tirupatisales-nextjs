@@ -147,64 +147,70 @@ export default function CatalogView({
             )}
           </nav>
 
-          {/* Brand Filter Dropdown */}
-          <div className="flex items-center gap-2">
-            <Filter className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-xs font-semibold text-gray-600 hidden sm:inline">
-              Brand:
-            </span>
-            <div className="relative">
-              <select
-                value={selectedBrand}
-                onChange={(e) => handleBrandChange(e.target.value)}
-                className="appearance-none bg-gray-50 border border-gray-200 rounded-xl px-3 py-1.5 pr-8 text-xs font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 cursor-pointer shadow-xs"
-              >
-                <option value="All">All Brands ({initialProducts.length})</option>
-                {brands.map((b) => (
-                  <option key={b} value={b}>
-                    {b} ({brandCounts.get(b) || 0})
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="w-3.5 h-3.5 text-gray-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+          {/* Filter Dropdowns: Category & Brand */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            {/* Category / Subcategory Filter Dropdown */}
+            {subcategories.length > 0 && (
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="text-xs font-semibold text-gray-600 hidden sm:inline">
+                  Category:
+                </span>
+                <div className="relative">
+                  <select
+                    value={categoryId || "all"}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      const params = new URLSearchParams(
+                        searchParams.toString()
+                      );
+                      const query = params.toString()
+                        ? `?${params.toString()}`
+                        : "";
+                      if (val === "all") {
+                        router.push(`/category/${parentCatId}${query}`);
+                      } else {
+                        router.push(`/category/${parentCatId}/${val}${query}`);
+                      }
+                    }}
+                    className="appearance-none bg-gray-50 border border-gray-200 rounded-xl px-3 py-1.5 pr-8 text-xs font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 cursor-pointer shadow-xs"
+                  >
+                    <option value="all">All Subcategories</option>
+                    {subcategories.map((sub) => (
+                      <option key={sub.id} value={sub.slug}>
+                        {sub.name}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="w-3.5 h-3.5 text-gray-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                </div>
+              </div>
+            )}
+
+            {/* Brand Filter Dropdown */}
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <Filter className="w-3.5 h-3.5 text-gray-400" />
+              <span className="text-xs font-semibold text-gray-600 hidden sm:inline">
+                Brand:
+              </span>
+              <div className="relative">
+                <select
+                  value={selectedBrand}
+                  onChange={(e) => handleBrandChange(e.target.value)}
+                  className="appearance-none bg-gray-50 border border-gray-200 rounded-xl px-3 py-1.5 pr-8 text-xs font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500 cursor-pointer shadow-xs"
+                >
+                  <option value="All">All Brands ({initialProducts.length})</option>
+                  {brands.map((b) => (
+                    <option key={b} value={b}>
+                      {b} ({brandCounts.get(b) || 0})
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-3.5 h-3.5 text-gray-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Subcategory Pills Strip */}
-      {subcategories.length > 0 && (
-        <div className="bg-white/80 border-b border-gray-100 px-4 sm:px-6 lg:px-8 py-2.5 overflow-x-auto">
-          <div className="max-w-7xl mx-auto flex items-center gap-2">
-            <Link
-              href={`/category/${parentCatId}`}
-              className={`px-3 py-1 rounded-full text-xs font-semibold transition-all whitespace-nowrap ${
-                !categoryId
-                  ? "bg-red-600 text-white shadow-xs"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              All Subcategories
-            </Link>
-            {subcategories.map((sub) => {
-              const isSelected = sub.slug === categoryId;
-              return (
-                <Link
-                  key={sub.id}
-                  href={`/category/${parentCatId}/${sub.slug}`}
-                  className={`px-3 py-1 rounded-full text-xs font-semibold transition-all whitespace-nowrap ${
-                    isSelected
-                      ? "bg-red-600 text-white shadow-xs"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                  }`}
-                >
-                  {sub.name}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
 
       {/* Main Catalog Body */}
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 flex-1 flex flex-col lg:flex-row gap-6 items-start">

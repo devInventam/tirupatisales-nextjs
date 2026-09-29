@@ -5,7 +5,7 @@ import Image from "next/image";
 import {
   X,
   FileDown,
-  MessageCircle,
+  Send,
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
@@ -91,10 +91,10 @@ export default function ProductDetailsModal({
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-green-600 hover:bg-green-700 transition-colors shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-red-600 hover:bg-red-700 transition-colors shadow-xs"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Inquiry</span>
+              <Send className="w-4 h-4" />
+              <span>Enquire</span>
             </a>
 
             <button

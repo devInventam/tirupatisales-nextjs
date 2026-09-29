@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Send } from "lucide-react";
 import { ProductItem } from "@/types";
 
 interface ProductCardProps {
@@ -82,11 +82,11 @@ export function ProductCard({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-1.5 px-2 text-[11px] font-semibold text-white bg-green-600 hover:bg-green-700 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs"
-            aria-label={`WhatsApp inquiry for ${safeName}`}
+            className="w-full py-1.5 px-2 text-[11px] font-semibold text-white bg-red-600 hover:bg-red-700 rounded-lg flex items-center justify-center gap-1 transition-colors shadow-xs"
+            aria-label={`Enquire about ${safeName}`}
           >
-            <span>WhatsApp</span>
-            <MessageCircle className="w-3 h-3" />
+            <span>Enquire</span>
+            <Send className="w-3 h-3" />
           </a>
         </div>
       </div>
