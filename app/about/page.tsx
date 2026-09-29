@@ -34,7 +34,6 @@ export default async function AboutPage() {
       companyService.getInfrastructureItems(),
       technicalGuideService.getGroupCompanies(),
     ]);
-  console.log("🚀 ~ AboutPage ~ companyInfo:", companyInfo);
 
   return (
     <main className="min-h-screen">
